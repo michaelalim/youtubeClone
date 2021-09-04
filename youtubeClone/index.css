@@ -1,0 +1,175 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #212121;
+    color: #fff;
+    height: 1000vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: 1fr 1fr auto;
+    grid-template-areas: 
+        "n h h h h h h h h h h h h h h"
+        "n c c c c c c c c c c c c c c"
+        "n c c c c c c c c c c c c c c";
+}
+
+.header{
+    position: fixed;
+    height: 60px;
+    right: 0;
+    width: 93.3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    grid-area: h;
+}
+
+.logo-section,
+.others-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+.logo-section{
+    justify-content: left;
+}
+
+.search-bar-section,
+.search-bar-section form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.logo-section{
+    width: 10%;
+}
+
+.search-bar-section{
+    width: 70%;
+    height: 100%;
+}
+
+.others-section{
+    width: 20%;
+}
+
+.menu{
+    position: absolute;
+    left: 20px;
+}
+
+.logo{
+    position: absolute;
+}
+
+.logo img{
+    height: 55px;
+}
+
+.search-bar-section form{
+    width: 100%;
+}
+
+.search-bar-section input{
+    display: block;
+    width: 65%;
+    background: #111;
+    border: 1px solid #333;
+    height: 31px;
+    color: #bbb;
+    padding-left: 15px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-bar-section input:focus{
+    border: 1px solid rgb(65, 104, 131);
+}
+
+.search-bar-section button{
+    height: 31px;
+    border-radius: 0;
+    border: none;
+    background: #333;
+    color: #999;
+    width: 10%;
+}
+
+.search-bar-section .microphone{ 
+    margin-left: 15px;
+    background: #111;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar-section .microphone span{
+    font-size: 1.4rem;
+    color: #eee;
+}
+
+.others-section .profile-link{
+    border-radius: 50%;
+    height: 35px;
+    overflow: hidden;
+}
+
+.others-section img{
+    height: 35px;
+}
+
+.others-section a{
+    display: block;
+}
+
+.others-section a span{
+    font-size: 1.8rem;
+    color: #eee;
+}
+
+.others-section a span:visited{
+    color: #eee;
+}
+
+nav.sidebar{
+    position: fixed;
+    grid-area: n;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;    
+    width: 6.7%;
+}
+
+nav.sidebar span{
+    margin: 0 auto;
+}
+
+nav.sidebar .label{
+    font-size: 0.5rem;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+nav.sidebar .side-icon{
+    margin-top: 20px;
+}
+
+nav.sidebar span.side-icon.home-icon{
+    margin-top: 50px;
+}
