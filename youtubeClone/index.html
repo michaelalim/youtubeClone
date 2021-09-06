@@ -15,16 +15,18 @@
     <div class="main-container">
         <header class="header">
             <div class="logo-section">
-                <div class="head logo"><img src="imgs/logo.png"></div>
+                <!-- I put the logo in the sidebar in absolute position so that it won't get behind the sidebar, I hope I could fix this -->
             </div> 
             <div class="search-bar-section">
                 <form>
                     <input type="text" name="seach-bar" placeholder="Search">
-                    <button type="submit"><span class="material-icons-sharp">search</span></button>
-                    <div class="microphone"><span class="material-icons-sharp">mic</span></div>
+                    <button type="submit" id="search-btn"><span class="material-icons-sharp">search</span></button>
+                    <div class="microphone" id="microphone"><span class="material-icons-sharp">mic</span></div>
                 </form>
             </div>
             <div class="others-section">
+                <button type="submit" id="search-btn-850px"><span class="material-icons-sharp">search</span></button>
+                <div class="microphone" id="microphone-850px"><span class="material-icons-sharp">mic</span></div>
                 <a href="#" class="head-link"><span class="material-icons-outlined">video_call</span></a>
                 <a href="#" class="head-link"><span class="material-icons-outlined">apps</span></a>
                 <a href="#" class="head-link"><span class="material-icons-outlined">notifications</span></a>
@@ -33,19 +35,30 @@
         </header>
 
         <nav class="sidebar">
-            <span class="side-icon material-icons-sharp">menu</span>
-            <span class="home-icon side-icon material-icons">home</span>
-            <span class="label">Home</span>
-            <span class="side-icon material-icons-outlined">explore</span>
-            <span class="label">Explore</span>
-            <span class="side-icon material-icons-outlined">subscriptions</span>
-            <span class="label">Subscriptions</span>
-            <span class="side-icon material-icons-outlined">video_library</span>
-            <span class="label">Library</span>
+            <a href="#"><img src="imgs/logo.png"></a>
+            <button class="sidebar-btn menu-btn">
+                <span class="side-icon material-icons-sharp">menu</span>
+            </button>
+            <button class="sidebar-btn home-btn">
+                <span class="home-icon side-icon material-icons">home</span>
+                <span class="label">Home</span>
+            </button>
+            <button class="sidebar-btn explore-btn">
+                <span class="side-icon material-icons-outlined">explore</span>
+                <span class="label">Explore</span>
+            </button>
+            <button class="sidebar-btn sub-btn">
+                <span class="side-icon material-icons-outlined">subscriptions</span>
+                <span class="label">Subscriptions</span>
+            </button>
+            <button class="sidebar-btn library-btn">
+                <span class="side-icon material-icons-outlined">video_library</span>
+                <span class="label">Library</span>
+            </button>
         </nav>
 
         <section class="categories">
-            <button class="category category1 active">All</button>
+            <button class="category category1 active" id="category1">All</button>
             <button class="category category2">Web Dev Simplified</button>
             <button class="category category3">Scrimba</button>
             <button class="category category4">League of Legends</button>
@@ -58,17 +71,6 @@
         </section>
 
         <div class="video-content">
-            <article class="video-container">
-                <div class="video-el video1"></div>
-                <div class="channel-row-container">
-                    <img src="imgs/channel.PNG">
-                    <div class="video-texts">
-                        <h5 class="video-title">Made In The AM - Full</h5>
-                        <h6 class="channel-title">Top Music Vevo</h6>
-                        <h6 class="views-count">13k views · 1 week ago</h6>
-                    </div>
-                </div>
-            </article>
 
             <article class="video-container">
                 <div class="video-el video1"></div>
@@ -81,7 +83,6 @@
                     </div>
                 </div>
             </article>
-            
             <article class="video-container">
                 <div class="video-el video2"></div>
                 <div class="channel-row-container">
@@ -401,9 +402,10 @@
                     </div>
                 </div>
             </article>
-            
         </div>
-        
     </div>
+
+    <script src="index.js"></script>
+
 </body>
 </html>
