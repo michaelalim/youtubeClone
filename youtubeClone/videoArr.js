@@ -193,7 +193,5 @@ export const videoList = [
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
-        age: "1 week"},
-
-        
+        age: "1 week"}
 ]

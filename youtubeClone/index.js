@@ -8,6 +8,31 @@ const categoryBtn = document.querySelectorAll("button.category");
 const videosEl = document.querySelectorAll("div.video-el");
 const videoTitleEl = document.querySelectorAll(".video-title");
 const contentContainer = document.getElementById("video-content");
+const menuBtn = document.getElementById("menu-btn");
+const menuEl = document.getElementById("menu-section");
+const offSidebarSpaces = document.getElementById("off-sidebar-space");
+
+
+
+menuBtn.addEventListener("click", () => {
+    menuEl.style.display = "block";
+
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+  
+        // if any scroll is attempted, set this to the previous value
+        window.onscroll = function() {
+            window.scrollTo(scrollLeft, scrollTop);
+        }
+});
+
+offSidebarSpaces.addEventListener("click", () => {
+
+    menuEl.style.display = "none";
+    
+    // overrides the function window.onscroll with a blank one so that it can allow scrolling again
+    window.onscroll = function() {};
+})
 
 videoDisplay(videoList);
 

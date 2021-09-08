@@ -11,8 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTube Clone</title>
 </head>
-<body>
-    <div class="main-container">
+<body class = "scrollbar" id="body">
+
+    <div class="main-container" id="main-container">
         <header class="header">
             <div class="logo-section">
                 <!-- I put the logo in the sidebar in absolute position so that it won't get behind the sidebar, I hope I could fix this -->
@@ -36,7 +37,7 @@
 
         <nav class="sidebar">
             <a href="#"><img src="imgs/logo.png"></a>
-            <button class="sidebar-btn menu-btn">
+            <button class="sidebar-btn menu-btn" id="menu-btn">
                 <span class="side-icon material-icons-sharp">menu</span>
             </button>
             <button class="sidebar-btn home-btn">
@@ -72,7 +73,35 @@
 
         <div class="video-content" id="video-content"></div>
 
+       
+    </div>
+
+    <!-- Menu screen -->
+    <div class="menu-section" id="menu-section">
+            <div class="off-sidebar-container" id="menu-section-sidebar">
+                
+                    <div class="off-sidebar off-menu-logo">
+                        <button class="off-sidebar-btn off-menu-btn" id="off-menu-btn">
+                            <span class="side-icon material-icons-sharp">menu</span>
+                        </button>
+                        <a href="#"><img src="imgs/logo.png"></a>
+                    </div>
+                <div class="section-division first-division">
+                    <button class="off-sidebar off-current off-btn off-home-btn"><span class="off-home-icon off-side-icon material-icons">home</span><span class="off-btn-text">Home</span></button>
+                    <button class="off-sidebar off-btn"><span class="off-side-icon material-icons-outlined">explore</span><span class="off-btn-text">Explore</span></button>
+                    <button class="off-sidebar off-btn"><span class="off-side-icon material-icons-outlined">subscriptions</span><span class="off-btn-text">Subscriptions</span></button>
+                </div>
+                    
+            </div>
+
+        <div class="off-sidebar-space" id="off-sidebar-space">
+            
+        </div>
+    </div>
+
+    
     <script type="module" src="index.js"></script>
 
+    
 </body>
 </html>
