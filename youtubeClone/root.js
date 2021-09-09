@@ -1,23 +1,12 @@
-// videosArray
-import { videoList } from "./arrays.js";
+
 
 // sidebarArray
 import { first, second, third, fourth, fifth, bottom1, bottom2 } from "./arrays.js";
 
-const searchBtn = document.getElementById("search-btn");
-const microphoneBtn = document.getElementById("microphone");
-const searchBtnSmall = document.getElementById("search-btn-850px");
-const microphoneBtnSmall = document.getElementById("microphone-850px");
-const categoryBtn = document.querySelectorAll("button.category");
-const videosEl = document.querySelectorAll("div.video-el");
-const contentContainer = document.getElementById("video-content");
 const menuBtn = document.getElementById("menu-btn");
 const menuEl = document.getElementById("menu-section");
 const offSidebarSpaces = document.getElementById("off-sidebar-space");
-const exploreBtn = document.getElementById("explore-btn");
-videoDisplay(videoList);
-//I put it here cause the video title only appears after here from the call of the videoDisplay function
-const videoTitleEl = document.querySelectorAll(".video-title");
+
 
 menuBtn.addEventListener("click", () => {
     menuEl.style.display = "block";
@@ -39,56 +28,7 @@ offSidebarSpaces.addEventListener("click", () => {
     window.onscroll = function() {};
 })
 
-exploreBtn.addEventListener("click", () => {
-    location.href="./explore/index.html"
-})
-
-//clicking the video
-videosEl.forEach(div => {
-    div.addEventListener("click", () => {
-        location.href="#";
-    })
-})
-
-videoTitleEl.forEach(div => {
-    div.addEventListener("click", () => {
-        location.href="#";
-    })
-})
-
-searchBtn.addEventListener("click", () => {
-    location.href="#";
-    // videosEl.forEach(div => {
-    //     div.classList.add("video-el-animation");
-    // })
-    // This is a test for hover effect using eventlistener of "mouseover"
-});
-
-//clicking the microphone
-microphoneBtn.addEventListener("click", () => {
-    location.href="#";
-});
-
-//clicking the searchButton
-searchBtnSmall.addEventListener("click", () => {
-    location.href="#";
-});
-
-//clicking the microphone
-microphoneBtnSmall.addEventListener("click", () => {
-    location.href="#";
-});
-
-//clicking the search !! this should hide other header elements and show input element
-categoryBtn.forEach((btn) => {
-    btn.addEventListener("click", () => {
-        location.href="#";
-    })
-}); 
-
-
 //This part is hidden, only shows when you click menu button top-left
-
 const firstDivision = document.getElementById("first-division");
 const secondDivision = document.getElementById("second-division");
 const thirdDivision = document.getElementById("third-division");
@@ -97,8 +37,10 @@ const fifthDivision = document.getElementById("fifth-division");
 const bottomUpper = document.getElementById("sixth-bottom-1");
 const bottomLower = document.getElementById("sixth-bottom-2");
 
-let count = 0;
+
     
+export function startUp() {
+let count = 0;
 first.forEach((objs) => {
     //buttoncreation with their respective classes
     const offBtn = document.createElement("button");
@@ -157,7 +99,7 @@ third.forEach((objs) => {
     offBtn.appendChild(circle);
     //img
     const img = document.createElement("img");
-    img.src = objs.img;
+    img.src = `../${objs.img}`;
     circle.appendChild(img);
     //channel names
     const offBtnText = document.createElement("span");
@@ -220,50 +162,6 @@ bottom2.forEach((links) => {
     bottomLower.appendChild(link);
 })
 
-function videoDisplay(arr) {
-
-
-
-    arr.forEach(vids => {
-
-        const card = document.createElement("article");
-        card.classList.add("video-container");
-        contentContainer.appendChild(card);
-
-        const video = document.createElement("div");
-        video.classList.add("video-el");
-        card.appendChild(video);
-
-        const innerCard = document.createElement("div");
-        innerCard.classList.add("channel-row-container");
-        card.appendChild(innerCard);
-
-        const channelPic = document.createElement("img");
-        channelPic.src = vids.channel;
-        innerCard.appendChild(channelPic);
-
-        const textDiv = document.createElement("div");
-        textDiv.classList.add("video-texts");
-        innerCard.appendChild(textDiv);
-
-        const vidTitle = document.createElement("h5");
-        vidTitle.classList.add("video-title");
-        vidTitle.textContent = vids.title;
-        textDiv.appendChild(vidTitle);
-
-        const channelTitle = document.createElement("h6");
-        channelTitle.classList.add("channel-title");
-        channelTitle.textContent = vids.channelName;
-        textDiv.appendChild(channelTitle);
-
-        const viewsCount = document.createElement("h6");
-        viewsCount.classList.add("views-count");
-        viewsCount.textContent = `${vids.views} views · ${vids.age} ago`;
-        textDiv.appendChild(viewsCount);
-
-    })
-}
-
 function addSeeMoreInSecond() {
     const offBtn = document.createElement("button");
     offBtn.classList.add("off-sidebar", "off-btn");
@@ -296,4 +194,6 @@ function addSeeMoreInThird() {
     offBtnText.classList.add("off-btn-text");
     offBtnText.textContent = "Show more";
     offBtn.appendChild(offBtnText);
+}
+
 }

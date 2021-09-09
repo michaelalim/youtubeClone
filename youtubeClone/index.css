@@ -213,135 +213,6 @@ nav.sidebar button .side-icon{
     margin-bottom: 10px;
 }
 
-section.categories{
-    grid-area: c;
-    height: 55px;
-    z-index: 0;
-    position: fixed;
-    border-bottom: 1px solid #333;
-    right: 0;
-    width: calc(100% - 85px);
-    top: 60px;
-    overflow: hidden;
-    z-index: 4;
-    background: #212121;
-    opacity: 0.975;
-    /* transition: ease-in 100ms; */
-}
-
-section.categories button.category{
-    width: max-content;
-    padding: 8px 15px;
-    margin: 10px 5px;
-    background: #333;
-    border: 0.1px solid #555;
-    outline: none;
-    border-radius: 25px;
-    font-weight: 550;
-    color: #eee;
-}
-
-section.categories button.category.active{
-    background: #ddd;
-    color: #111;
-}
-
-.video-content{
-    position: absolute;
-    right: 0;
-    margin-top: 50px;
-    padding: 70px 20px;
-    display: grid;
-    grid-gap: 10px;
-    width: calc(100% - 85px);
-    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-    grid-auto-rows: 280px;
-    align-items: center;
-    justify-items: center;
-    background: #131313;
-    grid-area: v;
-}
-
-.video-el{
-    height: 150px;
-    width: 260px;
-    margin-bottom: 5px;
-    background-image: url(imgs/tempo_thumbnail.jpg);
-    background-color: black;
-    background-blend-mode: difference;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.video-el:hover{
-    background-image: url(imgs/album.PNG);
-    background-size: cover;
-    cursor: pointer;
-}
-
-.channel-row-container .video-texts h5.video-title:hover,
-.channel-row-container .video-texts h6:hover,
-.channel-row-container img,
-.categories .category{
-    cursor: pointer;
-}
-
-.categories .category{
-    transition: background 200ms;
-}
-
-.categories .category:hover{
-    background: #444;
-}
-
-.channel-row-container{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    width: 260px;
-    height: 50px;
-    position: relative;
-}
-
-.video-container img{
-    position: absolute;
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;
-    left: 5px;
-}
-
-.channel-row-container .video-texts{
-    position: relative;
-    width: 210px;
-    min-height: 20px;
-    top: 30px;
-    left: 25px;
-    display: flex;
-    flex-direction: column;
-}
-
-h5,
-h6{
-    margin: 0;
-}
-
-.channel-row-container h5{
-    top: 0;
-    margin-bottom: 10px;
-}
-
-.channel-row-container .video-texts h6{
-    font-weight: lighter;
-    color: #999;
-    font-size: 14px;
-}
-
-.channel-row-container .video-texts h6.channel-title{
-    margin-bottom: 5px;
-}
-
 .menu-section{
     position: fixed;
     height: 100vh;
@@ -514,6 +385,138 @@ h6{
 i.fa{
     font-size: 24px;
 }
+
+/* This is for the home-page */
+
+section.categories{
+    grid-area: c;
+    height: 55px;
+    z-index: 0;
+    position: fixed;
+    border-bottom: 1px solid #333;
+    right: 0;
+    width: calc(100% - 85px);
+    top: 60px;
+    overflow: hidden;
+    z-index: 4;
+    background: #212121;
+    opacity: 0.975;
+}
+
+section.categories button.category{
+    width: max-content;
+    padding: 8px 15px;
+    margin: 10px 5px;
+    background: #333;
+    border: 0.1px solid #555;
+    outline: none;
+    border-radius: 25px;
+    font-weight: 550;
+    color: #eee;
+}
+
+section.categories button.category.active{
+    background: #ddd;
+    color: #111;
+}
+
+.video-content{
+    position: absolute;
+    right: 0;
+    margin-top: 50px;
+    padding: 70px 20px;
+    display: grid;
+    grid-gap: 10px;
+    width: calc(100% - 85px);
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    grid-auto-rows: 280px;
+    align-items: center;
+    justify-items: center;
+    background: #131313;
+    grid-area: v;
+}
+
+.video-el{
+    height: 150px;
+    width: 260px;
+    margin-bottom: 5px;
+    background-image: url(imgs/tempo_thumbnail.jpg);
+    background-color: black;
+    background-blend-mode: difference;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.video-el:hover{
+    background-image: url(imgs/album.PNG);
+    background-size: cover;
+    cursor: pointer;
+}
+
+.channel-row-container .video-texts h5.video-title:hover,
+.channel-row-container .video-texts h6:hover,
+.channel-row-container img,
+.categories .category{
+    cursor: pointer;
+}
+
+.categories .category{
+    transition: background 200ms;
+}
+
+.categories .category:hover{
+    background: #444;
+}
+
+.channel-row-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 260px;
+    height: 50px;
+    position: relative;
+}
+
+.video-container img{
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    left: 5px;
+}
+
+.channel-row-container .video-texts{
+    position: relative;
+    width: 210px;
+    min-height: 20px;
+    top: 30px;
+    left: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+h5,
+h6{
+    margin: 0;
+}
+
+.channel-row-container h5{
+    top: 0;
+    margin-bottom: 10px;
+}
+
+.channel-row-container .video-texts h6{
+    font-weight: lighter;
+    color: #999;
+    font-size: 14px;
+}
+
+.channel-row-container .video-texts h6.channel-title{
+    margin-bottom: 5px;
+}
+
+/* Except media queries which I think should always be in the bottom */
 
 @media all and (max-width: 850px){
 
