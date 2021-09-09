@@ -184,6 +184,8 @@ second.forEach((objs) => {
     offBtn.appendChild(offBtnText);
 })
 
+addSeeMoreInSecond();
+
 third.forEach((objs) => {
     const offBtn = document.createElement("div");
     offBtn.classList.add("off-sidebar", "off-btn");
@@ -263,6 +265,23 @@ const offHomeBtn = document.getElementById("offHomeBtn");
 offHomeBtn.addEventListener("click", () => {
     location.href="http://youtube.com";
 })
+
+function addSeeMoreInSecond() {
+    const offBtn = document.createElement("button");
+    offBtn.classList.add("off-sidebar", "off-btn");
+    offBtn.setAttribute("id", "offArrowDown1Btn");
+    secondDivision.appendChild(offBtn);
+
+    const offBtnIcon = document.createElement("span");
+    offBtnIcon.classList.add("off-side-icon", "material-icons-outlined");
+    offBtnIcon.textContent = "keyboard_arrow_down";
+    offBtn.appendChild(offBtnIcon);
+
+    const offBtnText = document.createElement("span");
+    offBtnText.classList.add("off-btn-text");
+    offBtnText.textContent = "Show more";
+    offBtn.appendChild(offBtnText);
+}
 
 function addSeeMoreInThird() {
     const offBtn = document.createElement("button");

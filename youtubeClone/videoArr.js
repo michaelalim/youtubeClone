@@ -41,11 +41,6 @@ export const second = [
                 id: "offLikedBtn",
                 spanName: "thumb_up",
                 title: "Liked Videos"
-        },
-        {
-                id: "offArrowDown1Btn",
-                spanName: "keyboard_arrow_down",
-                title: "Show More"
         }
 ]
 
