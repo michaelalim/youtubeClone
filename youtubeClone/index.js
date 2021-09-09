@@ -1,4 +1,8 @@
+// videosArray
 import { videoList } from "./videoArr.js";
+
+// sidebarArray
+import { first, second, third, fourth, fifth, bottom1, bottom2 } from "./videoArr.js";
 
 const searchBtn = document.getElementById("search-btn");
 const microphoneBtn = document.getElementById("microphone");
@@ -11,7 +15,6 @@ const contentContainer = document.getElementById("video-content");
 const menuBtn = document.getElementById("menu-btn");
 const menuEl = document.getElementById("menu-section");
 const offSidebarSpaces = document.getElementById("off-sidebar-space");
-
 
 
 menuBtn.addEventListener("click", () => {
@@ -124,3 +127,156 @@ categoryBtn.forEach((btn) => {
     })
 }); 
 
+
+//This part is hidden, only shows when you click menu button top-left
+const firstDivision = document.getElementById("first-division");
+const secondDivision = document.getElementById("second-division");
+const thirdDivision = document.getElementById("third-division");
+const fourthDivision = document.getElementById("fourth-division");
+const fifthDivision = document.getElementById("fifth-division");
+const bottomUpper = document.getElementById("sixth-bottom-1");
+const bottomLower = document.getElementById("sixth-bottom-2");
+
+let count = 0;
+    
+first.forEach((objs) => {
+    //buttoncreation with their respective classes
+    const offBtn = document.createElement("button");
+    offBtn.classList.add("off-sidebar", "off-btn");
+    if(count === 0){
+        offBtn.classList.add("off-current", "off-home-btn");
+    }
+    offBtn.setAttribute("id", objs.id);
+    firstDivision.appendChild(offBtn);
+    //icon inside the buttons
+    const offBtnIcon = document.createElement("span");
+    offBtnIcon.classList.add("off-side-icon", "material-icons-outlined");
+    if(count === 0){
+        offBtnIcon.classList.add("off-home-icon");
+    }
+    offBtnIcon.textContent = objs.spanName;
+    offBtn.appendChild(offBtnIcon);
+    //text inside the buttons
+    const offBtnText = document.createElement("span");
+    offBtnText.classList.add("off-btn-text");
+    offBtnText.textContent = objs.title;
+    offBtn.appendChild(offBtnText);
+    count++;
+})
+
+second.forEach((objs) => {
+    const offBtn = document.createElement("button");
+    offBtn.classList.add("off-sidebar", "off-btn");
+    offBtn.setAttribute("id", objs.id);
+    secondDivision.appendChild(offBtn);
+    //icon inside the buttons
+    const offBtnIcon = document.createElement("span");
+    offBtnIcon.classList.add("off-side-icon", "material-icons-outlined");
+    if(count === 0){
+        offBtnIcon.classList.add("off-home-icon");
+    }
+    offBtnIcon.textContent = objs.spanName;
+    offBtn.appendChild(offBtnIcon);
+    //text inside the buttons
+    const offBtnText = document.createElement("span");
+    offBtnText.classList.add("off-btn-text");
+    offBtnText.textContent = objs.title;
+    offBtn.appendChild(offBtnText);
+})
+
+third.forEach((objs) => {
+    const offBtn = document.createElement("div");
+    offBtn.classList.add("off-sidebar", "off-btn");
+    offBtn.setAttribute("id", objs.id);
+    thirdDivision.appendChild(offBtn);
+    //div for shaping the image
+    const circle = document.createElement("div");
+    circle.classList.add("off-btn-image-subs");
+    offBtn.appendChild(circle);
+    //img
+    const img = document.createElement("img");
+    img.src = objs.img;
+    circle.appendChild(img);
+    //channel names
+    const offBtnText = document.createElement("span");
+    offBtnText.classList.add("off-btn-text");
+    offBtnText.textContent = objs.title;
+    offBtn.appendChild(offBtnText);
+    
+})
+
+//will add the see more here since its a button while others consist of different things like
+//img and others are div instead of a button
+addSeeMoreInThird();
+
+fourth.forEach((objs) => {
+
+    const offBtn = document.createElement("button");
+    offBtn.classList.add("off-sidebar", "off-btn");
+    offBtn.setAttribute("id", objs.id);
+    fourthDivision.appendChild(offBtn);
+
+    const offBtnIcon = document.createElement("span");
+    offBtnIcon.classList.add("off-side-icon", "material-icons-outlined");
+    offBtnIcon.textContent = objs.spanName;
+    offBtn.appendChild(offBtnIcon);
+
+    const offBtnText = document.createElement("span");
+    offBtnText.classList.add("off-btn-text");
+    offBtnText.textContent = objs.title;
+    offBtn.appendChild(offBtnText);
+})
+
+fifth.forEach((objs) => {
+    const offBtn = document.createElement("button");
+    offBtn.classList.add("off-sidebar", "off-btn");
+    offBtn.setAttribute("id", objs.id);
+    fifthDivision.appendChild(offBtn);
+
+    const offBtnIcon = document.createElement("span");
+    offBtnIcon.classList.add("off-side-icon", "material-icons-outlined");
+    offBtnIcon.textContent = objs.spanName;
+    offBtn.appendChild(offBtnIcon);
+
+    const offBtnText = document.createElement("span");
+    offBtnText.classList.add("off-btn-text");
+    offBtnText.textContent = objs.title;
+    offBtn.appendChild(offBtnText);
+})
+
+bottom1.forEach((links) => {
+    const link = document.createElement("a");
+    link.href = links.link;
+    link.textContent = links.title;
+    bottomUpper.appendChild(link);
+})
+
+bottom2.forEach((links) => {
+    const link = document.createElement("a");
+    link.href = links.link;
+    link.textContent = links.title;
+    bottomLower.appendChild(link);
+})
+
+//a test that an element made by js and an id added from js would be effective still
+const offHomeBtn = document.getElementById("offHomeBtn");
+offHomeBtn.addEventListener("click", () => {
+    location.href="http://youtube.com";
+})
+
+function addSeeMoreInThird() {
+    const offBtn = document.createElement("button");
+    offBtn.classList.add("off-sidebar", "off-btn");
+    offBtn.setAttribute("id", "offArrowDown2Btn");
+    thirdDivision.appendChild(offBtn);
+
+    const offBtnIcon = document.createElement("span");
+    offBtnIcon.classList.add("off-side-icon", "material-icons-outlined");
+    offBtnIcon.textContent = "keyboard_arrow_down";
+    offBtn.appendChild(offBtnIcon);
+
+    const offBtnText = document.createElement("span");
+    offBtnText.classList.add("off-btn-text");
+    offBtnText.textContent = "Show more";
+    offBtn.appendChild(offBtnText);
+}
