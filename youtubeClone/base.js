@@ -1,3 +1,5 @@
+
+
 export const first = [
         {
                 id: "offHomeBtn",
@@ -188,7 +190,6 @@ export const bottom2 = [
         }
 ]
 
-
 export const videoList = [
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
@@ -196,235 +197,235 @@ export const videoList = [
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"},
-
+    
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
         title: "Made In The AM - Full",
         channelName: "Top Music Vevo",
         views: "13k",
         age: "1 week"}
-]
+    ]

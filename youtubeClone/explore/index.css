@@ -1,0 +1,407 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #212121;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main-container{
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-auto-rows: 1.5fr 1fr auto;
+    grid-template-areas: 
+        "n h h h h h h h h h h h h h h"
+        "n c c c c c c c c c c c c c c"
+        "n v v v v v v v v v v v v v v";
+}
+
+.header{
+    background: #212121;
+    position: fixed;
+    height: 60px;
+    right: 0;
+    width: calc(100% - 85px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    grid-area: h;
+    z-index: 5;
+    opacity: 0.975;
+}
+
+.logo-section,
+.others-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+.logo-section{
+    justify-content: left;
+    align-items: center;
+    position: relative;
+    width: 100px;
+    flex: 1 1 100px;
+}
+
+.search-bar-section,
+.search-bar-section form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.search-bar-section{
+    width: 70%;
+    height: 100%;
+    flex: 1 4 70%;
+}
+
+.others-section{
+    width: 300px;
+}
+
+.others-section .microphone,
+.others-section button{
+    display: none;
+}
+
+.others-section button:hover,
+.others-section .microphone:hover{
+    cursor: pointer;
+}
+
+
+
+nav.sidebar img{
+    position: absolute;
+    display: block;
+    height: 55px;
+    width: 80px;
+    left: 80px;
+}
+
+.search-bar-section form{
+    width: 100%;
+}
+
+.search-bar-section input{
+    display: block;
+    width: 65%;
+    background: #111;
+    border: 1px solid #333;
+    height: 31px;
+    color: #bbb;
+    padding-left: 15px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-bar-section input:focus{
+    border: 1px solid rgb(65, 104, 131);
+}
+
+.search-bar-section button{
+    height: 31px;
+    border-radius: 0;
+    border: none;
+    background: #333;
+    color: #999;
+    width: 80px;
+}
+
+.search-bar-section button:hover{
+    cursor: pointer;    
+    color: #ccc;
+}
+
+.search-bar-section .microphone{ 
+    margin-left: 15px;
+    background: #111;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#microphone:hover{
+    cursor: pointer;
+}
+
+.search-bar-section .microphone span{
+    font-size: 1.4rem;
+    color: #eee;
+}
+.others-section .profile-link{
+    border-radius: 50%;
+    height: 35px;
+    overflow: hidden;
+}
+
+.others-section img{
+    height: 35px;
+}
+
+.others-section a{
+    display: block;
+}
+
+.others-section a span{
+    font-size: 1.8rem;
+    color: #eee;
+}
+
+.others-section a span:visited{
+    color: #eee;
+}
+
+nav.sidebar{
+    position: fixed;
+    grid-area: n;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;    
+    width: 85px;
+    z-index: 10;
+    background: #222;
+}
+
+nav.sidebar button{
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+    border: none;
+    outline: none;
+    color: #eee;
+    font-size: 0.6rem;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+nav.sidebar button:hover{
+    background: #444;
+    border: 3px solid #444;
+    cursor: pointer;
+}
+
+nav.sidebar .menu-btn{
+    height: 60px;
+    padding-top: 15px;
+}
+
+nav.sidebar .menu-btn:hover{
+    background: none;
+    border: none;
+}
+
+nav.sidebar button .side-icon{
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.menu-section{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    background: #08080899;
+    display: none;
+    /* overflow: hidden; */
+}
+
+.off-sidebar-space{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc(100% - 240px);
+    height: 100vh;
+}
+
+.off-sidebar-container{
+    opacity: 1;
+    width: 240px;
+    background: #222;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.off-menu-logo{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 3px;
+}
+
+.off-menu-logo img{
+    height: 55px;
+    width: 80px;
+    left: 80px;
+}
+
+.off-menu-logo .off-menu-btn{
+    background: #222;
+    border: none;
+    outline: none;
+    color: #ccc;
+    padding: 5px;
+}
+
+.off-btn{
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 40px;
+    border: none;
+    font-weight: bold;
+    color: #eee;
+    margin: 0;
+    background: transparent;
+}
+
+.off-btn:hover{
+    cursor: pointer;
+    background: #444;
+}
+
+.off-current{
+    background: #444;
+}
+
+.off-current:hover{
+    background: #777;
+}
+
+.off-home-btn{
+    margin-top: 12px;
+    padding-top: 0;
+}
+
+.off-btn span{
+    display: block;
+}
+
+.off-side-icon{
+    position: absolute;
+    left: 30px;
+}
+
+.off-btn-text{
+    position: absolute;
+    left: 80px;
+}
+
+.section-division{
+    border-bottom: 1px solid #333;
+    background:#222;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 100%;
+    padding: 12px 0;
+}
+
+.third-division h6,
+.fourth-division h6{
+    margin: 5px 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #aaa;
+}
+
+.third-division span{
+    font-size: 0.8rem;
+}
+
+.third-division .off-btn-image-subs{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    overflow: hidden;
+    left: 30px;
+}
+
+.third-division img{
+    height: 25px;
+    width: 25px;
+}
+
+.third-division > div:nth-child(2),
+.fourth-division > button:nth-child(2){
+    margin-top: 10px;
+}
+
+.third-division button span{
+    font-size: 0.9rem;
+}
+
+.third-division .off-side-icon.material-icons-outlined{
+    font-size: 1.5rem;
+}
+
+.sixth-division a{
+    text-decoration: none;
+    font-size: 0.65rem;
+    display: inline-block;
+    font-weight: bold;
+    color: #aaa;
+    margin: 0 3px;
+}
+
+.sixth-division a:visited{
+    color: #aaa;
+}
+
+.sixth-division div{
+    margin: 10px 30px;
+}
+
+.sixth-division .copyright{
+    font-size: 0.65rem;
+    display: block;
+    margin: 10px 30px;
+    color: #888;
+}
+
+i.fa{
+    font-size: 24px;
+}
+
+@media all and (max-width: 850px){
+
+    .search-bar-section input,
+    .search-bar-section .microphone,
+    .search-bar-section button{
+        display: none;
+    }
+
+    .others-section .microphone,
+    .others-section button{
+        display: initial;
+    }
+
+    .others-section button{
+        background: #222;
+        color: #eee;
+        border: none;
+    }
+}
