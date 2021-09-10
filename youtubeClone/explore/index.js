@@ -1,3 +1,5 @@
-import { startUp } from "../root.js"
+// this is the whole sidebar
+
+import { startUp } from "../sidebar.js"
 
 startUp();

@@ -1,15 +1,18 @@
-
-
 // sidebarArray
 import { first, second, third, fourth, fifth, bottom1, bottom2 } from "./arrays.js";
 
 const menuBtn = document.getElementById("menu-btn");
 const menuEl = document.getElementById("menu-section");
 const offSidebarSpaces = document.getElementById("off-sidebar-space");
-
+const sidebarAnimation = document.getElementById("menu-section-sidebar");
 
 menuBtn.addEventListener("click", () => {
+    
+    sidebarAnimation.classList.add("sidebar-ani");
     menuEl.style.display = "block";
+    setTimeout(() => {
+        sidebarAnimation.classList.remove("sidebar-ani");
+    }, 150);
 
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
@@ -18,16 +21,22 @@ menuBtn.addEventListener("click", () => {
         window.onscroll = function() {
             window.scrollTo(scrollLeft, scrollTop);
         }
+
 });
 
 offSidebarSpaces.addEventListener("click", () => {
-
-    menuEl.style.display = "none";
+   
+    sidebarAnimation.classList.add("sidebar-ani-rev");
+    setTimeout(() => {
+        sidebarAnimation.classList.remove("sidebar-ani-rev");
+        menuEl.style.display = "none";
+    }, 150);
     
     // overrides the function window.onscroll with a blank one so that it can allow scrolling again
     window.onscroll = function() {};
-})
 
+    
+})
 //This part is hidden, only shows when you click menu button top-left
 const firstDivision = document.getElementById("first-division");
 const secondDivision = document.getElementById("second-division");
