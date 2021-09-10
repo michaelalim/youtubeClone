@@ -235,7 +235,7 @@ nav.sidebar button .side-icon{
 
 @keyframes show-menu{
     0% {
-        transform: translateX(-80%);
+        transform: translateX(-90%);
     }
     100% {
         transform: translateX(0);
@@ -281,6 +281,15 @@ nav.sidebar button .side-icon{
     outline: none;
     color: #ccc;
     padding: 5px;
+}
+
+.off-menu-btn{
+    cursor: pointer;
+}
+
+.off-menu-btn span{
+    display: inline-block;
+    font-size: 30px;
 }
 
 .off-btn{
@@ -459,7 +468,7 @@ section.categories button.category.active{
     height: 150px;
     width: 260px;
     margin-bottom: 5px;
-    background-image: url(../imgs/tempo_thumbnail.jpg);
+    background-image: url(imgs/tempo_thumbnail.jpg);
     background-color: black;
     background-blend-mode: difference;
     background-position: center;
@@ -468,7 +477,7 @@ section.categories button.category.active{
 }
 
 .video-el:hover{
-    background-image: url(../imgs/album.PNG);
+    background-image: url(imgs/album.PNG);
     background-size: cover;
     cursor: pointer;
 }

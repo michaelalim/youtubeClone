@@ -2,9 +2,9 @@
 import { videoList } from "../arrays.js";
 
 //sidebar
-import { startUp } from "../sidebar.js"
+import { startUp } from "../sidebar.js";
 
-startUp();
+startUp("Home");
 
 const searchBtn = document.getElementById("search-btn");
 const microphoneBtn = document.getElementById("microphone");
@@ -13,14 +13,9 @@ const microphoneBtnSmall = document.getElementById("microphone-850px");
 const categoryBtn = document.querySelectorAll("button.category");
 const videosEl = document.querySelectorAll("div.video-el");
 const contentContainer = document.getElementById("video-content");
-const exploreBtn = document.getElementById("explore-btn");
 videoDisplay(videoList);
 //I put it here cause the video title only appears after here from the call of the videoDisplay function
 const videoTitleEl = document.querySelectorAll(".video-title");
-
-exploreBtn.addEventListener("click", () => {
-    location.href="./explore/index.html"
-})
 
 //clicking the video
 videosEl.forEach(div => {

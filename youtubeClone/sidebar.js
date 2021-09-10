@@ -1,10 +1,31 @@
 // sidebarArray
 import { first, second, third, fourth, fifth, bottom1, bottom2 } from "./arrays.js";
 
+export function startUp(page) {
 const menuBtn = document.getElementById("menu-btn");
 const menuEl = document.getElementById("menu-section");
-const offSidebarSpaces = document.getElementById("off-sidebar-space");
+const offMenuBtn = document.querySelectorAll(".close-menu");
 const sidebarAnimation = document.getElementById("menu-section-sidebar");
+const exploreBtn = document.getElementById("explore-btn");
+const homeBtn = document.getElementById("home-btn");
+const subBtn = document.getElementById("sub-btn");
+const libBtn = document.getElementById("lib-btn");
+
+homeBtn.addEventListener("click", () => {
+    location.href="../home/index.html"
+})
+
+exploreBtn.addEventListener("click", () => {
+    location.href="../explore/index.html"
+})
+
+subBtn.addEventListener("click", () => {
+    location.href="../subscriptions/index.html"
+})
+
+libBtn.addEventListener("click", () => {
+    location.href="../library/index.html"
+})
 
 menuBtn.addEventListener("click", () => {
     
@@ -24,19 +45,24 @@ menuBtn.addEventListener("click", () => {
 
 });
 
-offSidebarSpaces.addEventListener("click", () => {
-   
-    sidebarAnimation.classList.add("sidebar-ani-rev");
-    setTimeout(() => {
-        sidebarAnimation.classList.remove("sidebar-ani-rev");
-        menuEl.style.display = "none";
-    }, 150);
+offMenuBtn.forEach((closemenu) => {
+    closemenu.addEventListener("click", () => {
     
-    // overrides the function window.onscroll with a blank one so that it can allow scrolling again
-    window.onscroll = function() {};
+        sidebarAnimation.classList.add("sidebar-ani-rev");
+        setTimeout(() => {
+            sidebarAnimation.classList.remove("sidebar-ani-rev");
+            menuEl.style.display = "none";
+        }, 150);
+        
+        // overrides the function window.onscroll with a blank one so that it can allow scrolling again
+        window.onscroll = function() {};
 
-    
+        
+    })
 })
+
+
+
 //This part is hidden, only shows when you click menu button top-left
 const firstDivision = document.getElementById("first-division");
 const secondDivision = document.getElementById("second-division");
@@ -46,22 +72,24 @@ const fifthDivision = document.getElementById("fifth-division");
 const bottomUpper = document.getElementById("sixth-bottom-1");
 const bottomLower = document.getElementById("sixth-bottom-2");
 
-
-    
-export function startUp() {
 let count = 0;
 first.forEach((objs) => {
     //buttoncreation with their respective classes
     const offBtn = document.createElement("button");
     offBtn.classList.add("off-sidebar", "off-btn");
-    if(count === 0){
-        offBtn.classList.add("off-current", "off-home-btn");
+    if (count === 0){
+        offBtn.classList.add("off-home-btn");
     }
     offBtn.setAttribute("id", objs.id);
     firstDivision.appendChild(offBtn);
     //icon inside the buttons
     const offBtnIcon = document.createElement("span");
     offBtnIcon.classList.add("off-side-icon", "material-icons-outlined");
+    if (page === objs.title){
+        offBtn.classList.add("off-current");
+        offBtnIcon.classList.add("material-icons");
+        
+    }
     if(count === 0){
         offBtnIcon.classList.add("off-home-icon");
     }

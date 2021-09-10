@@ -36,11 +36,11 @@
         </header>
 
         <nav class="sidebar">
-            <a href="#"><img src="../imgs/logo.png"></a>
+            <a href="../home/index.html"><img src="../imgs/logo.png"></a>
             <button class="sidebar-btn menu-btn" id="menu-btn">
                 <span class="side-icon material-icons-sharp">menu</span>
             </button>
-            <button class="sidebar-btn home-btn">
+            <button class="sidebar-btn home-btn" id="home-btn">
                 <span class="home-icon side-icon material-icons-outlined">home</span>
                 <span class="label">Home</span>
             </button>
@@ -48,53 +48,56 @@
                 <span class="side-icon material-icons">explore</span>
                 <span class="label">Explore</span>
             </button>
-            <button class="sidebar-btn sub-btn">
+            <button class="sidebar-btn sub-btn" id = "sub-btn">
                 <span class="side-icon material-icons-outlined">subscriptions</span>
                 <span class="label">Subscriptions</span>
             </button>
-            <button class="sidebar-btn library-btn">
+            <button class="sidebar-btn library-btn" id = "lib-btn">
                 <span class="side-icon material-icons-outlined">video_library</span>
                 <span class="label">Library</span>
             </button>
         </nav>
     </div>
 
-    <!-- Menu screen -->
+
+    <!-- Menu section -->
     <div class="menu-section" id="menu-section">
-            <div class="off-sidebar-container" id="menu-section-sidebar">
-                
-                <div class="off-sidebar off-menu-logo">
-                    <button class="off-sidebar-btn off-menu-btn" id="off-menu-btn">
-                        <span class="side-icon material-icons-sharp">menu</span>
-                    </button>
-                    <a href="#"><img src="../imgs/logo.png"></a>
-                </div>
-                <div class="section-division first-division" id="first-division"></div>
-                <div class="section-division second-division" id="second-division"></div>
-                <div class="section-division third-division" id="third-division">
-                    <h6 class="section-title">SUBSCRIPTIONS</h6>
-                </div>
-                <div class="section-division fourth-division" id="fourth-division">
-                    <h6 class="section-title">MORE FROM YOUTUBE</h6>
-                    <button class="off-sidebar off-btn">
-                        <i class="fa off-side-icon">&#xf16a;</i>
-                        <span class="off-btn-text">YouTube Premium</span>
-                    </button>
-                </div>
-                <div class="section-division fifth-division" id="fifth-division"></div>
-                <div class="section-division sixth-division">
-                    <div class = "off-screen-bottom bottom-1" id="sixth-bottom-1"></div>
-                    
-                    <div class = "off-screen-bottom bottom-2" id="sixth-bottom-2"></div>
-
-                    <span class="copyright">© 2021 Google LLC</span>
-                </div>
+        <div class="off-sidebar-container" id="menu-section-sidebar">
+            
+            <div class="off-sidebar off-menu-logo">
+                <button class="off-sidebar-btn off-menu-btn close-menu" id="off-menu-btn">
+                    <span class="side-icon material-icons-sharp">menu</span>
+                </button>
+                <a href="#"><img src="../imgs/logo.png"></a>
             </div>
+            <div class="section-division first-division" id="first-division"></div>
+            <div class="section-division second-division" id="second-division"></div>
+            <div class="section-division third-division" id="third-division">
+                <h6 class="section-title">SUBSCRIPTIONS</h6>
+            </div>
+            <div class="section-division fourth-division" id="fourth-division">
+                <h6 class="section-title">MORE FROM YOUTUBE</h6>
+                <button class="off-sidebar off-btn">
+                    <i class="fa off-side-icon">&#xf16a;</i>
+                    <span class="off-btn-text">YouTube Premium</span>
+                </button>
+            </div>
+            <div class="section-division fifth-division" id="fifth-division"></div>
+            <div class="section-division sixth-division">
+                <div class = "off-screen-bottom bottom-1" id="sixth-bottom-1"></div>
+                
+                <div class = "off-screen-bottom bottom-2" id="sixth-bottom-2"></div>
 
-        <div class="off-sidebar-space" id="off-sidebar-space"></div>
+                <span class="copyright">© 2021 Google LLC</span>
+            </div>
+        </div>
+
+    <div class="off-sidebar-space close-menu" id="off-sidebar-space">
+        
     </div>
+</div>
 
-    
-    <script type="module" src="index.js"></script>  
+
+<script type="module" src="index.js"></script>  
 </body>
 </html>
