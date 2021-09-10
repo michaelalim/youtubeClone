@@ -2,4 +2,4 @@
 
 import { startUp } from "../sidebar.js"
 
-startUp();
+startUp("Library");

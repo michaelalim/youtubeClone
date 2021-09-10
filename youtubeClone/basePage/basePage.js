@@ -13,51 +13,29 @@ const html = `<!DOCTYPE html>
 </head>
 <body class = "scrollbar" id="body">
 
-    <div class="main-container" id="main-container">
-        <header class="header">
-            <div class="logo-section">
-                <!-- I put the logo in the sidebar in absolute position so that it won't get behind the sidebar, I hope I could fix this -->
-            </div> 
-            <div class="search-bar-section">
-                <form>
-                    <input type="text" name="seach-bar" placeholder="Search">
-                    <button type="submit" id="search-btn"><span class="material-icons-sharp">search</span></button>
-                    <div class="microphone" id="microphone"><span class="material-icons-sharp">mic</span></div>
-                </form>
-            </div>
-            <div class="others-section">
-                <button type="submit" id="search-btn-850px"><span class="material-icons-sharp">search</span></button>
-                <div class="microphone" id="microphone-850px"><span class="material-icons-sharp">mic</span></div>
-                <a href="#" class="head-link"><span class="material-icons-outlined">video_call</span></a>
-                <a href="#" class="head-link"><span class="material-icons-outlined">apps</span></a>
-                <a href="#" class="head-link"><span class="material-icons-outlined">notifications</span></a>
-                <a href="#" class="head-link profile-link"><img src="../imgs/profile.jpg"></a>
-            </div>
-        </header>
-
-        <nav class="sidebar">
-            <a href="../home/index.html"><img src="../imgs/logo.png"></a>
-            <button class="sidebar-btn menu-btn" id="menu-btn">
-                <span class="side-icon material-icons-sharp">menu</span>
-            </button>
-            <button class="sidebar-btn home-btn" id="home-btn">
-                <span class="home-icon side-icon material-icons-outlined">home</span>
-                <span class="label">Home</span>
-            </button>
-            <button class="sidebar-btn explore-btn" id="explore-btn">
-                <span class="side-icon material-icons">explore</span>
-                <span class="label">Explore</span>
-            </button>
-            <button class="sidebar-btn sub-btn" id = "sub-btn">
-                <span class="side-icon material-icons-outlined">subscriptions</span>
-                <span class="label">Subscriptions</span>
-            </button>
-            <button class="sidebar-btn library-btn" id = "lib-btn">
-                <span class="side-icon material-icons-outlined">video_library</span>
-                <span class="label">Library</span>
-            </button>
-        </nav>
+<div class="main-container-home" id="main-container">
+<header class="header">
+    <div class="logo-section">
+        <a href="#"><img src="../imgs/logo.png"></a>
+    </div> 
+    <div class="search-bar-section">
+        <form>
+            <input type="text" name="seach-bar" placeholder="Search">
+            <button type="submit" id="search-btn"><span class="material-icons-sharp">search</span></button>
+            <div class="microphone" id="microphone"><span class="material-icons-sharp">mic</span></div>
+        </form>
     </div>
+    <div class="others-section">
+        <button type="submit" id="search-btn-850px"><span class="material-icons-sharp">search</span></button>
+        <div class="microphone" id="microphone-850px"><span class="material-icons-sharp">mic</span></div>
+        <a href="#" class="head-link"><span class="material-icons-outlined">video_call</span></a>
+        <a href="#" class="head-link"><span class="material-icons-outlined">apps</span></a>
+        <a href="#" class="head-link"><span class="material-icons-outlined">notifications</span></a>
+        <a href="#" class="head-link profile-link"><img src="../imgs/profile.jpg"></a>
+    </div>
+</header>
+
+<nav class="sidebar" id="sidebar-nav"></nav>
 
 
     <!-- Menu section -->

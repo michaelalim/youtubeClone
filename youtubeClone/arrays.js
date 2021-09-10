@@ -1,5 +1,37 @@
+//buttons on the sidebar
+export const openSidebar = [
+        {
+                id: "menu-btn",
+                uniqueClass: "menu-btn",
+                spanName: "menu"
+        },
+        {
+                id: "home-btn",
+                uniqueClass: "home-btn",
+                spanName: "home",
+                title: "Home"
+        },
+        {
+                id: "explore-btn",
+                uniqueClass: "explore-btn",
+                spanName: "explore",
+                title: "Explore"
+        },
+        {
+                id: "sub-btn",
+                uniqueClass: "sub-btn",
+                spanName: "subscriptions",
+                title: "Subscriptions"
+        },
+        {
+                id: "lib-btn",
+                uniqueClass: "library-btn",
+                spanName: "video_library",
+                title: "Library"
+        }
+]
 
-
+//buttons on the sidebar when you click the menu (1st part)
 export const first = [
         {
                 id: "offHomeBtn",
@@ -18,6 +50,7 @@ export const first = [
         }    
 ]
 
+//buttons on the sidebar when you click the menu (2nd part)
 export const second = [
         {
                 id: "offLibraryBtn",
@@ -46,6 +79,7 @@ export const second = [
         }
 ]
 
+//buttons on the sidebar when you click the menu (3rd part)
 export const third = [
         {
                 id: "scrimbaPage",
@@ -84,6 +118,7 @@ export const third = [
         }
 ]
 
+//buttons on the sidebar when you click the menu (4th part)
 export const fourth = [
         {
                 id: "filmsBtn",
@@ -113,6 +148,7 @@ export const fourth = [
         
 ]
 
+//buttons on the sidebar when you click the menu (5th part)
 export const fifth = [
         {
                 id: "offSettingsBtn",
@@ -136,6 +172,7 @@ export const fifth = [
         }
 ]
 
+//all the links at the bottom of the hidden-menu bar (1st part)
 export const bottom1 = [
         {
                 link: "#",
@@ -167,6 +204,7 @@ export const bottom1 = [
         }
 ]
 
+//all the links at the bottom of the hidden-menu bar (2nd part)
 export const bottom2 = [
         {
                 link: "#",
@@ -190,6 +228,7 @@ export const bottom2 = [
         }
 ]
 
+//HOMEPAGE || videos
 export const videoList = [
         {thumbnail: 'imgs/tempo_thumbnail.jpg',
         channel: 'imgs/channel.PNG',
@@ -429,3 +468,47 @@ export const videoList = [
         views: "13k",
         age: "1 week"}
     ]
+
+//HOMEPAGE || categories
+export const categories = [
+        {
+                name: "All",
+                link: "#"
+        },
+        {
+                name: "Web Dev Simplified",
+                link: "#"
+        },
+        {
+                name: "Scrimba",
+                link: "#"
+        },
+        {
+                name: "League of Legends",
+                link: "#"
+        },
+        {
+                name: "Tinakitten",
+                link: "#"
+        },
+        {
+                name: "Synapse",
+                link: "#"
+        },
+        {
+                name: "One Direction",
+                link: "#"
+        },
+        {
+                name: "Stevensuptic",
+                link: "#"
+        },
+        {
+                name: "SUGR",
+                link: "#"
+        },
+        {
+                name: "Dumbdog",
+                link: "#"
+        }
+]

@@ -1,11 +1,42 @@
 // sidebarArray
-import { first, second, third, fourth, fifth, bottom1, bottom2 } from "./arrays.js";
+import { first, second, third, fourth, fifth, bottom1, bottom2, openSidebar } from "./arrays.js";
 
 export function startUp(page) {
+
+const sidebar = document.getElementById("sidebar-nav");
+const searchBtn = document.getElementById("search-btn");
+const microphoneBtn = document.getElementById("microphone");
+const searchBtnSmall = document.getElementById("search-btn-850px");
+const microphoneBtnSmall = document.getElementById("microphone-850px");
+const sidebarAnimation = document.getElementById("menu-section-sidebar");
+
+openSidebar.forEach((objs) => {
+    const btn = document.createElement("button");
+    btn.classList.add("sidebar-btn", objs.uniqueClass);
+    btn.setAttribute("id", objs.id);
+    sidebar.appendChild(btn);
+
+    const btnIcon = document.createElement("span");
+    btnIcon.classList.add("side-icon")
+    if (page === objs.title){
+        btnIcon.classList.add("material-icons");
+    } else {
+        btnIcon.classList.add("material-icons-outlined");
+    }
+    btnIcon.textContent = objs.spanName;
+    btn.appendChild(btnIcon);
+
+    const btnText = document.createElement("span");
+    btnText.classList.add("label");
+    btnText.textContent = objs.title;
+    btn.appendChild(btnText);
+})
+
+
+
 const menuBtn = document.getElementById("menu-btn");
 const menuEl = document.getElementById("menu-section");
 const offMenuBtn = document.querySelectorAll(".close-menu");
-const sidebarAnimation = document.getElementById("menu-section-sidebar");
 const exploreBtn = document.getElementById("explore-btn");
 const homeBtn = document.getElementById("home-btn");
 const subBtn = document.getElementById("sub-btn");
@@ -61,6 +92,32 @@ offMenuBtn.forEach((closemenu) => {
     })
 })
 
+searchBtn.addEventListener("click", () => {
+    location.href="#";
+    // videosEl.forEach(div => {
+    //     div.classList.add("video-el-animation");
+    // })
+    // This is a test for hover effect using eventlistener of "mouseover"
+});
+
+//clicking the microphone
+microphoneBtn.addEventListener("click", () => {
+    location.href="#";
+});
+
+//clicking the searchButton
+searchBtnSmall.addEventListener("click", () => {
+    location.href="#";
+});
+
+//clicking the microphone
+microphoneBtnSmall.addEventListener("click", () => {
+    location.href="#";
+});
+
+let count = 0;
+//opensidebar dom inputs
+
 
 
 //This part is hidden, only shows when you click menu button top-left
@@ -72,23 +129,21 @@ const fifthDivision = document.getElementById("fifth-division");
 const bottomUpper = document.getElementById("sixth-bottom-1");
 const bottomLower = document.getElementById("sixth-bottom-2");
 
-let count = 0;
+
 first.forEach((objs) => {
     //buttoncreation with their respective classes
     const offBtn = document.createElement("button");
     offBtn.classList.add("off-sidebar", "off-btn");
-    if (count === 0){
-        offBtn.classList.add("off-home-btn");
-    }
     offBtn.setAttribute("id", objs.id);
     firstDivision.appendChild(offBtn);
     //icon inside the buttons
     const offBtnIcon = document.createElement("span");
-    offBtnIcon.classList.add("off-side-icon", "material-icons-outlined");
+    offBtnIcon.classList.add("off-side-icon");
     if (page === objs.title){
-        offBtn.classList.add("off-current");
         offBtnIcon.classList.add("material-icons");
-        
+        offBtn.classList.add("off-current");
+    } else {
+        offBtnIcon.classList.add("material-icons-outlined");
     }
     if(count === 0){
         offBtnIcon.classList.add("off-home-icon");
@@ -113,6 +168,10 @@ second.forEach((objs) => {
     offBtnIcon.classList.add("off-side-icon", "material-icons-outlined");
     if(count === 0){
         offBtnIcon.classList.add("off-home-icon");
+    }
+    if (page === objs.title){
+        offBtn.classList.add("off-current");
+        offBtnIcon.classList.add("material-icons");
     }
     offBtnIcon.textContent = objs.spanName;
     offBtn.appendChild(offBtnIcon);

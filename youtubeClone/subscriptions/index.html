@@ -13,10 +13,10 @@
 </head>
 <body class = "scrollbar" id="body">
 
-    <div class="main-container" id="main-container">
+    <div class="main-container-home" id="main-container">
         <header class="header">
             <div class="logo-section">
-                <!-- I put the logo in the sidebar in absolute position so that it won't get behind the sidebar, I hope I could fix this -->
+                <a href="#"><img src="../imgs/logo.png"></a>
             </div> 
             <div class="search-bar-section">
                 <form>
@@ -35,29 +35,7 @@
             </div>
         </header>
 
-        <nav class="sidebar">
-            <a href="../home/index.html"><img src="../imgs/logo.png"></a>
-            <button class="sidebar-btn menu-btn" id="menu-btn">
-                <span class="side-icon material-icons-sharp">menu</span>
-            </button>
-            <button class="sidebar-btn home-btn" id="home-btn">
-                <span class="home-icon side-icon material-icons-outlined">home</span>
-                <span class="label">Home</span>
-            </button>
-            <button class="sidebar-btn explore-btn" id="explore-btn">
-                <span class="side-icon material-icons-outlined">explore</span>
-                <span class="label">Explore</span>
-            </button>
-            <button class="sidebar-btn sub-btn" id = "sub-btn">
-                <span class="side-icon material-icons">subscriptions</span>
-                <span class="label">Subscriptions</span>
-            </button>
-            <button class="sidebar-btn library-btn" id = "lib-btn">
-                <span class="side-icon material-icons-outlined">video_library</span>
-                <span class="label">Library</span>
-            </button>
-        </nav>
-    </div>
+        <nav class="sidebar" id="sidebar-nav"></nav>
 
 
     <!-- Menu section -->

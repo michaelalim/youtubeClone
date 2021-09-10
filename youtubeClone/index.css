@@ -81,13 +81,12 @@ body{
 }
 
 
-
-nav.sidebar img{
+.logo-section img{
     position: absolute;
     display: block;
     height: 55px;
     width: 80px;
-    left: 80px;
+    top: 0;
 }
 
 .search-bar-section form{
@@ -232,17 +231,6 @@ nav.sidebar button .side-icon{
 .sidebar-ani-rev{
     animation: show-menu 200ms linear reverse;
 }
-
-@keyframes show-menu{
-    0% {
-        transform: translateX(-90%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-
 
 .off-sidebar-space{
     position: absolute;
@@ -416,7 +404,7 @@ i.fa{
 
 /* This is for the home-page */
 
-section.categories{
+.categories{
     grid-area: c;
     height: 55px;
     z-index: 0;
@@ -431,7 +419,7 @@ section.categories{
     opacity: 0.975;
 }
 
-section.categories button.category{
+.categories button.category{
     width: max-content;
     padding: 8px 15px;
     margin: 10px 5px;
@@ -443,7 +431,7 @@ section.categories button.category{
     color: #eee;
 }
 
-section.categories button.category.active{
+.categories button.category.active{
     background: #ddd;
     color: #111;
 }
@@ -545,6 +533,15 @@ h6{
 }
 
 /* Except media queries which I think should always be in the bottom */
+
+@keyframes show-menu{
+    0% {
+        transform: translateX(-90%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
 
 @media all and (max-width: 850px){
 

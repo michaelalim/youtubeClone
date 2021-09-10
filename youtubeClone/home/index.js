@@ -1,21 +1,18 @@
 // videosArray
-import { videoList } from "../arrays.js";
+import { videoList, categories } from "../arrays.js";
 
 //sidebar
 import { startUp } from "../sidebar.js";
 
 startUp("Home");
 
-const searchBtn = document.getElementById("search-btn");
-const microphoneBtn = document.getElementById("microphone");
-const searchBtnSmall = document.getElementById("search-btn-850px");
-const microphoneBtnSmall = document.getElementById("microphone-850px");
-const categoryBtn = document.querySelectorAll("button.category");
 const videosEl = document.querySelectorAll("div.video-el");
 const contentContainer = document.getElementById("video-content");
+const categoryContainer = document.getElementById("categories-container");
 videoDisplay(videoList);
 //I put it here cause the video title only appears after here from the call of the videoDisplay function
 const videoTitleEl = document.querySelectorAll(".video-title");
+
 
 //clicking the video
 videosEl.forEach(div => {
@@ -30,28 +27,24 @@ videoTitleEl.forEach(div => {
     })
 })
 
-searchBtn.addEventListener("click", () => {
-    location.href="#";
-    // videosEl.forEach(div => {
-    //     div.classList.add("video-el-animation");
-    // })
-    // This is a test for hover effect using eventlistener of "mouseover"
-});
 
-//clicking the microphone
-microphoneBtn.addEventListener("click", () => {
-    location.href="#";
-});
+let count = 0;
+categories.forEach((cat) => {
+    const btn = document.createElement("button");
+    btn.classList.add("category");
+    if (count === 0){
+        btn.classList.add("active");
+        btn.setAttribute("id", `category${count+1}`)
+    }
+    btn.textContent = cat.name;
+    btn.addEventListener("click", () => {
+        location.href = cat.link;
+    });
+    categoryContainer.appendChild(btn);
+    count++;
+}); 
 
-//clicking the searchButton
-searchBtnSmall.addEventListener("click", () => {
-    location.href="#";
-});
-
-//clicking the microphone
-microphoneBtnSmall.addEventListener("click", () => {
-    location.href="#";
-});
+const categoryBtn = document.querySelectorAll("button.category");
 
 //clicking the search !! this should hide other header elements and show input element
 categoryBtn.forEach((btn) => {
@@ -61,8 +54,6 @@ categoryBtn.forEach((btn) => {
 }); 
 
 function videoDisplay(arr) {
-
-
 
     arr.forEach(vids => {
 
