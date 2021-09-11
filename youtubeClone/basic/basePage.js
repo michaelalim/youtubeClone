@@ -25,14 +25,7 @@ const html = `<!DOCTYPE html>
                     <div class="microphone" id="microphone"><span class="material-icons-sharp">mic</span></div>
                 </form>
             </div>
-            <div class="others-section">
-                <button type="submit" id="search-btn-850px"><span class="material-icons-sharp">search</span></button>
-                <div class="microphone" id="microphone-850px"><span class="material-icons-sharp">mic</span></div>
-                <a href="#" class="head-link"><span class="material-icons-outlined">video_call</span></a>
-                <a href="#" class="head-link"><span class="material-icons-outlined">apps</span></a>
-                <a href="#" class="head-link"><span class="material-icons-outlined">notifications</span></a>
-                <a href="#" class="head-link profile-link"><img src="../../media/imgs/profile.jpg"></a>
-            </div>
+            <div class="others-section" id="others-section"></div>
         </header>
 
         <nav class="sidebar" id="sidebar-nav"></nav>

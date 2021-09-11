@@ -1,16 +1,10 @@
 // sidebarArray
-import { first, second, third, fourth, fifth, bottom1, bottom2, openSidebar } from "../arrays/sidebarArr.js";
+import { first, second, third, fourth, fifth, bottom1, bottom2, openSidebar, headerLinks } from "../arrays/sidebarArr.js";
 
 export function startUp(page) {
 
     const sidebar = document.getElementById("sidebar-nav");
-    const searchBtn = document.getElementById("search-btn");
-    const microphoneBtn = document.getElementById("microphone");
-    const searchBtnSmall = document.getElementById("search-btn-850px");
-    const microphoneBtnSmall = document.getElementById("microphone-850px");
     const sidebarAnimation = document.getElementById("menu-section-sidebar");
-
-    let count = 0;
 
     openSidebar.forEach((objs) => {
         const btn = document.createElement("button");
@@ -33,18 +27,64 @@ export function startUp(page) {
         btnText.textContent = objs.title;
         btn.appendChild(btnText);
         // event listener for each
-        if (count !== 0){ 
+        if (objs.spanName !== "menu"){ 
             btn.addEventListener("click", () => {
                 location.href = objs.link;
             })
         }
         // this is to not add an event listener to the menu button
-        count++;
     })
 
+    //these are the icons on the top right corner of every page
+    const topRightLinksContainer = document.getElementById("others-section");
+
+    headerLinks.forEach((link) => {
+        if(link.spanName === "search"){
+            const container = document.createElement("button");
+            container.setAttribute("id", "search-btn-850px");
+            topRightLinksContainer.appendChild(container);
+
+            const linkIcon = document.createElement("span");
+            linkIcon.classList.add("material-icons-outlined");
+            linkIcon.textContent = link.spanName;
+            container.appendChild(linkIcon);
+        } else if (link.spanName === "mic"){
+            const container = document.createElement("div");
+            container.classList.add("microphone");
+            container.setAttribute("id", "microphone-850px");
+            topRightLinksContainer.appendChild(container);
+
+            const linkIcon = document.createElement("span");
+            linkIcon.classList.add("material-icons-outlined");
+            linkIcon.textContent = link.spanName;
+            container.appendChild(linkIcon);
+        } else if (link.spanName === null){
+            const container = document.createElement("a");
+            container.addEventListener("click", () => {
+                location.href = "http://youtube.com"
+            })
+            container.classList.add("head-link", "profile-link");
+            topRightLinksContainer.appendChild(container);
+
+            const img = document.createElement("img");
+            img.src = link.imgSrc;
+            container.appendChild(img);
+        } else {
+            const container = document.createElement("a");
+            container.href = "http://youtube.com";
+            container.classList.add("head-link");
+            topRightLinksContainer.appendChild(container);
+
+            const linkIcon = document.createElement("span");
+            linkIcon.classList.add("material-icons-outlined");
+            linkIcon.textContent = link.spanName;
+            container.appendChild(linkIcon);
+        }
+    })
+
+    const offMenuBtn = document.querySelectorAll(".close-menu");
     const menuBtn = document.getElementById("menu-btn");
     const menuEl = document.getElementById("menu-section");
-    const offMenuBtn = document.querySelectorAll(".close-menu");
 
     menuBtn.addEventListener("click", () => {
         
@@ -61,8 +101,9 @@ export function startUp(page) {
             window.onscroll = function() {
                 window.scrollTo(scrollLeft, scrollTop);
             }
-
     });
+
+    
 
     offMenuBtn.forEach((closemenu) => {
         closemenu.addEventListener("click", () => {
@@ -80,7 +121,10 @@ export function startUp(page) {
         })
     })
 
-
+    const searchBtn = document.getElementById("search-btn");
+    const microphoneBtn = document.getElementById("microphone");
+    const searchBtnSmall = document.getElementById("search-btn-850px");
+    const microphoneBtnSmall = document.getElementById("microphone-850px");
 
     searchBtn.addEventListener("click", () => {
         location.href="#";
@@ -135,7 +179,7 @@ export function startUp(page) {
         } else {
             offBtnIcon.classList.add("material-icons-outlined");
         }
-        if(count === 0){
+        if(objs.title === "Home"){
             offBtnIcon.classList.add("off-home-icon");
         }
         offBtnIcon.textContent = objs.spanName;
@@ -149,7 +193,6 @@ export function startUp(page) {
         offBtn.addEventListener("click", () => {
             location.href = objs.link;
         })
-        count++;
     })
 
     second.forEach((objs) => {
@@ -160,9 +203,6 @@ export function startUp(page) {
         //icon inside the buttons
         const offBtnIcon = document.createElement("span");
         offBtnIcon.classList.add("off-side-icon", "material-icons-outlined");
-        if(count === 0){
-            offBtnIcon.classList.add("off-home-icon");
-        }
         if (page === objs.title){
             offBtn.classList.add("off-current");
             offBtnIcon.classList.add("material-icons");

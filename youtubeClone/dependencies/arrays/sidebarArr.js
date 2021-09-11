@@ -1,3 +1,4 @@
+//I included some arrays in the header here
 //buttons on the sidebar
 export const openSidebar = [
         {
@@ -33,6 +34,29 @@ export const openSidebar = [
                 title: "Library",
                 link: "../library/index.html"
         }
+]
+
+export const headerLinks = [
+        {
+                spanName: "search" 
+         },
+         {
+                spanName: "mic" 
+         },
+         {
+                spanName: "video_call" 
+         },
+         {
+                spanName: "apps" 
+         },
+         {
+                spanName: "notifications" 
+         },
+         {
+                spanName: null,
+                imgSrc: "../../media/imgs/profile.jpg"
+         },
+              
 ]
 
 //buttons on the sidebar when you click the menu (1st part)
