@@ -456,7 +456,7 @@ i.fa{
     height: 150px;
     width: 260px;
     margin-bottom: 5px;
-    background-image: url(imgs/tempo_thumbnail.jpg);
+    background-image: url(../../media/imgs/tempo_thumbnail.jpg);
     background-color: black;
     background-blend-mode: difference;
     background-position: center;
@@ -465,7 +465,7 @@ i.fa{
 }
 
 .video-el:hover{
-    background-image: url(imgs/album.PNG);
+    background-image: url(../../media/imgs/album.PNG);
     background-size: cover;
     cursor: pointer;
 }

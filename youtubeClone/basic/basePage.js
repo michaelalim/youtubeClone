@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../../dependencies/css/common.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
     <div class="main-container-home" id="main-container">
         <header class="header">
             <div class="logo-section">
-                <a href="#"><img src="../imgs/logo.png"></a>
+                <a href="../home/index.html"><img src="../../media/imgs/logo.png"></a>
             </div> 
             <div class="search-bar-section">
                 <form>
@@ -31,11 +31,13 @@
                 <a href="#" class="head-link"><span class="material-icons-outlined">video_call</span></a>
                 <a href="#" class="head-link"><span class="material-icons-outlined">apps</span></a>
                 <a href="#" class="head-link"><span class="material-icons-outlined">notifications</span></a>
-                <a href="#" class="head-link profile-link"><img src="../imgs/profile.jpg"></a>
+                <a href="#" class="head-link profile-link"><img src="../../media/imgs/profile.jpg"></a>
             </div>
         </header>
 
         <nav class="sidebar" id="sidebar-nav"></nav>
+
+
     <!-- Menu section -->
     <div class="menu-section" id="menu-section">
         <div class="off-sidebar-container" id="menu-section-sidebar">
@@ -44,7 +46,7 @@
                 <button class="off-sidebar-btn off-menu-btn close-menu" id="off-menu-btn">
                     <span class="side-icon material-icons-sharp">menu</span>
                 </button>
-                <a href="#"><img src="../imgs/logo.png"></a>
+                <a href="../home/index.html"><img src="../../media/imgs/logo.png"></a>
             </div>
             <div class="section-division first-division" id="first-division"></div>
             <div class="section-division second-division" id="second-division"></div>
@@ -76,4 +78,11 @@
 
 <script type="module" src="index.js"></script>  
 </body>
-</html>
+</html>`
+
+const js = `// this is the whole sidebar
+
+import { startUp } from "../../dependencies/elements/sidebar.js"
+
+startUp("");
+`

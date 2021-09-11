@@ -1,8 +1,13 @@
 // videosArray
-import { videoList, categories } from "../arrays.js";
+import { videoList } from "../../dependencies/arrays/videos.js";
 
 //sidebar
-import { startUp } from "../sidebar.js";
+import { startUp } from "../../dependencies/elements/sidebar.js";
+
+//categoriesArr
+import { categories } from "../../dependencies/arrays/categories.js"
+
+
 
 startUp("Home");
 
