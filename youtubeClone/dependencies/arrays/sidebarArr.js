@@ -38,23 +38,29 @@ export const openSidebar = [
 
 export const headerLinks = [
         {
-                spanName: "search" 
+                spanName: "search",
+                id: "search-btn-850px"
          },
          {
-                spanName: "mic" 
+                spanName: "mic" ,
+                id: "microphone-850px"
          },
          {
-                spanName: "video_call" 
+                spanName: "video_call",
+                id: "videocall-link"
          },
          {
-                spanName: "apps" 
+                spanName: "apps" ,
+                id: "apps-link"
          },
          {
-                spanName: "notifications" 
+                spanName: "notifications" ,
+                id: "notif-link"
          },
          {
                 spanName: null,
-                imgSrc: "../../media/imgs/profile.jpg"
+                imgSrc: "../../media/imgs/profile.jpg",
+                id: "profile-link"
          },
               
 ]

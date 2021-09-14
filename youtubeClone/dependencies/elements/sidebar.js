@@ -41,7 +41,7 @@ export function startUp(page) {
     headerLinks.forEach((link) => {
         if(link.spanName === "search"){
             const container = document.createElement("button");
-            container.setAttribute("id", "search-btn-850px");
+            container.setAttribute("id", link.id);
             topRightLinksContainer.appendChild(container);
 
             const linkIcon = document.createElement("span");
@@ -51,7 +51,7 @@ export function startUp(page) {
         } else if (link.spanName === "mic"){
             const container = document.createElement("div");
             container.classList.add("microphone");
-            container.setAttribute("id", "microphone-850px");
+            container.setAttribute("id", link.id);
             topRightLinksContainer.appendChild(container);
 
             const linkIcon = document.createElement("span");
@@ -64,6 +64,7 @@ export function startUp(page) {
                 location.href = "#"
             })
             container.classList.add("head-link", "profile-link");
+            container.setAttribute("id", link.id);
             topRightLinksContainer.appendChild(container);
 
             const img = document.createElement("img");
@@ -73,6 +74,7 @@ export function startUp(page) {
             const container = document.createElement("a");
             container.href = "http://youtube.com";
             container.classList.add("head-link");
+            container.setAttribute("id", link.id);
             topRightLinksContainer.appendChild(container);
 
             const linkIcon = document.createElement("span");
@@ -139,9 +141,37 @@ export function startUp(page) {
         location.href="#";
     });
 
+    //additional elements to hide when searchBtnSmall is clicked
+    const headLogo = document.getElementById("head-logo");
+    const vcallLink = document.getElementById("videocall-link");
+    const appsLink = document.getElementById("apps-link");
+    const notifLink = document.getElementById("notif-link");
+    const profLink = document.getElementById("profile-link");
+    const searchbar = document.getElementById("search-bar");
+    const headerEl = document.getElementById("header-container");
+
     //clicking the searchButton
     searchBtnSmall.addEventListener("click", () => {
-        location.href="#";
+        if(headLogo.style.display === "none"){
+            headLogo.style.display = "initial";
+            menuBtn.style.display = "initial";
+            vcallLink.style.display = "initial";
+            appsLink.style.display = "initial";
+            notifLink.style.display = "initial";
+            profLink.style.display = "initial";
+            searchbar.style.display = "none";
+            headerEl.style.width = "calc(100% - 85px)";
+        } else {
+            headLogo.style.display = "none";
+            menuBtn.style.display = "none";
+            vcallLink.style.display = "none";
+            appsLink.style.display = "none";
+            notifLink.style.display = "none";
+            profLink.style.display = "none";
+            searchbar.style.display = "block";
+            searchbar.style.width = "100vw";
+            headerEl.style.width = "100vw";
+        }
     });
 
     //clicking the microphone

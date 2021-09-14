@@ -201,6 +201,7 @@ nav.sidebar button:hover{
 nav.sidebar .menu-btn{
     height: 60px;
     padding-top: 15px;
+    z-index: 20;
 }
 
 nav.sidebar .menu-btn:hover{
@@ -445,12 +446,13 @@ i.fa{
     display: grid;
     grid-gap: 10px;
     width: calc(100% - 85px);
-    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
     grid-auto-rows: 280px;
     align-items: center;
     justify-items: center;
     background: #131313;
     grid-area: v;
+    top: 10px;
 }
 
 .video-el{
@@ -561,5 +563,30 @@ h6{
         background: #222;
         color: #eee;
         border: none;
+    }
+
+    #home-btn, #explore-btn, #sub-btn, #lib-btn{
+        display: none;
+    }
+
+    #menu-btn{
+        border-bottom: 1px solid #333;
+    }
+
+    nav.sidebar{
+        z-index: -1;
+    }
+
+    /* home */
+
+    #categories-container{
+        width: 100vw;
+        left: 0;
+        overflow: auto;
+    }
+
+    div.video-content{
+        width: 100vw;
+        left: 0;
     }
 }
