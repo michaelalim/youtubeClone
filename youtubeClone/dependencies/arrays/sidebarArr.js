@@ -119,37 +119,37 @@ export const second = [
 export const third = [
         {
                 id: "scrimbaPage",
-                img: "imgs/scrimba.jpg",
+                img: "../media/imgs/scrimba.jpg",
                 title: "Scrimba"
         },
         {
                 id: "synapsePage",
-                img: "imgs/synapse.jpg",
+                img: "../media/imgs/synapse.jpg",
                 title: "Synapse"
         },
         {
                 id: "webDevSimplifiedPage",
-                img: "imgs/webdevsimplified.jpg",
+                img: "../media/imgs/webdevsimplified.jpg",
                 title: "Web Dev Simplified"
         },
         {
                 id: "sneakyPage",
-                img: "imgs/sneaky.jpg",
+                img: "../media/imgs/sneaky.jpg",
                 title: "Sneaky"
         },
         {
                 id: "kevinPowellPage",
-                img: "imgs/kevinPowell.jpg",
+                img: "../media/imgs/kevinPowell.jpg",
                 title: "Kevin Powell"
         },
         {
                 id: "doubleliftPage",
-                img: "imgs/doublelift.jpg",
+                img: "../media/imgs/doublelift.jpg",
                 title: "Doublelift"
         },
         {
                 id: "offlinetvPage",
-                img: "imgs/offlinetv.png",
+                img: "../media/imgs/offlinetv.png",
                 title: "OfflineTV"
         }
 ]

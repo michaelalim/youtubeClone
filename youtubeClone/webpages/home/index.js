@@ -68,6 +68,9 @@ function videoDisplay(arr) {
 
         const video = document.createElement("div");
         video.classList.add("video-el");
+        video.addEventListener("click", () => {
+            location.href = "../video/index.html"
+        })
         card.appendChild(video);
 
         const innerCard = document.createElement("div");
@@ -77,7 +80,7 @@ function videoDisplay(arr) {
         const channelPic = document.createElement("img");
         channelPic.src = `../${vids.channel}`;
         innerCard.appendChild(channelPic);
-
+        
         const textDiv = document.createElement("div");
         textDiv.classList.add("video-texts");
         innerCard.appendChild(textDiv);

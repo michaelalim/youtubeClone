@@ -146,6 +146,7 @@ body{
     border-radius: 50%;
     height: 35px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .others-section img{

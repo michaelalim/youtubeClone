@@ -1,0 +1,7 @@
+#home-btn, #explore-btn, #sub-btn, #lib-btn{
+    display: none;
+}
+
+#menu-btn{
+    border-bottom: 1px solid #333;
+}

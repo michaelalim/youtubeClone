@@ -61,7 +61,7 @@ export function startUp(page) {
         } else if (link.spanName === null){
             const container = document.createElement("a");
             container.addEventListener("click", () => {
-                location.href = "http://youtube.com"
+                location.href = "#"
             })
             container.classList.add("head-link", "profile-link");
             topRightLinksContainer.appendChild(container);
