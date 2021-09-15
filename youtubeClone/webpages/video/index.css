@@ -120,6 +120,11 @@ header.header{
     font-size: 1.2rem;
 }
 
+.btnTextLikeRow{
+    display: inline-block;
+    margin-left: 3px;
+}
+
 .channel-info{
     height: 80px;
     display: flex;
