@@ -2,6 +2,7 @@
 
 import { startUp } from "../../dependencies/elements/sidebar.js"
 
+<<<<<<< HEAD
 // buttons on the LIKE row
 
 import { likeAreaArrs } from "./videoArrEls.js";
@@ -55,10 +56,18 @@ likeAreaArrs.forEach((btns) => {
     }
 })
 
+=======
+startUp();
+
+>>>>>>> 1afbfe4ff80e275178115b070c7c67ab472c3b00
 const descSeeMoreBtn = document.getElementById("see-more");
 const dots = document.getElementById("dots");
 const hiddenMsgs = document.querySelectorAll(".more");
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1afbfe4ff80e275178115b070c7c67ab472c3b00
 descSeeMoreBtn.addEventListener("click", () => {
    
     if (descSeeMoreBtn.textContent === "SHOW LESS"){
@@ -87,4 +96,8 @@ commentBar.addEventListener("input", () => {
         sendCommentBtn.style.background = "#333";
         sendCommentBtn.style.color = "#777";
     }
+<<<<<<< HEAD
 });
+=======
+})
+>>>>>>> 1afbfe4ff80e275178115b070c7c67ab472c3b00

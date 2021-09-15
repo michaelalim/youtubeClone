@@ -120,11 +120,14 @@ header.header{
     font-size: 1.2rem;
 }
 
+<<<<<<< HEAD
 .btnTextLikeRow{
     display: inline-block;
     margin-left: 3px;
 }
 
+=======
+>>>>>>> 1afbfe4ff80e275178115b070c7c67ab472c3b00
 .channel-info{
     height: 80px;
     display: flex;
