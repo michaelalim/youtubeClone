@@ -1,0 +1,17 @@
+
+
+@media all and (max-width: 850px){
+
+    /* home */
+
+    #categories-container{
+        width: 100vw;
+        left: 0;
+        overflow: auto;
+    }
+
+    div.video-content{
+        width: 100vw;
+        left: 0;
+    }
+}

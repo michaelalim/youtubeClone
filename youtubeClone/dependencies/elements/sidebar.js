@@ -10,7 +10,7 @@ export function startUp(page) {
         const btn = document.createElement("button");
         btn.classList.add("sidebar-btn", objs.uniqueClass);
         btn.setAttribute("id", objs.id);
-        sidebar.appendChild(btn);
+        sidebar.appendChild(btn); 
 
         const btnIcon = document.createElement("span");
         btnIcon.classList.add("side-icon")
@@ -160,7 +160,7 @@ export function startUp(page) {
             notifLink.style.display = "initial";
             profLink.style.display = "initial";
             searchbar.style.display = "none";
-            headerEl.style.width = "calc(100% - 85px)";
+            headerEl.style.width = "100%";
         } else {
             headLogo.style.display = "none";
             menuBtn.style.display = "none";
@@ -172,6 +172,17 @@ export function startUp(page) {
             searchbar.style.width = "100vw";
             headerEl.style.width = "100vw";
         }
+
+        // if ($window.width() > 0){
+        //     headLogo.style.display = "initial";
+        //     menuBtn.style.display = "initial";
+        //     vcallLink.style.display = "initial";
+        //     appsLink.style.display = "initial";
+        //     notifLink.style.display = "initial";
+        //     profLink.style.display = "initial";
+        //     searchbar.style.display = "none";
+        //     headerEl.style.width = "calc(100% - 85px)";
+        // } I think dapat lain nga listener para magbalik
     });
 
     //clicking the microphone

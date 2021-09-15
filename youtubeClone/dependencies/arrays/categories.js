@@ -13,6 +13,10 @@ export const categories = [
             link: "#"
     },
     {
+            name: "Day6",
+            link: "#"
+    },
+    {
             name: "League of Legends",
             link: "#"
     },

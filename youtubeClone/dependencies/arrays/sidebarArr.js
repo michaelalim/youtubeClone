@@ -2,11 +2,6 @@
 //buttons on the sidebar
 export const openSidebar = [
         {
-                id: "menu-btn",
-                uniqueClass: "menu-btn",
-                spanName: "menu"
-        },
-        {
                 id: "home-btn",
                 uniqueClass: "home-btn",
                 spanName: "home",

@@ -15,10 +15,11 @@ const html = `<!DOCTYPE html>
 
     <div class="main-container-home" id="main-container">
         <header class="header" id="header-container">
+            <button class="menu-btn sidebar-btn" id="menu-btn"><span class="side-icon material-icons-outlined">menu</span></button>
             <div class="logo-section">
                 <a href="../home/index.html" id="head-logo"><img src="../../media/imgs/logo.png"></a>
             </div> 
-            <div class="search-bar-section" id="search-bar">
+            <div class="search-bar-section">
                 <form>
                     <input type="text" name="seach-bar" placeholder="Search" id="search-bar">
                     <button type="submit" id="search-btn"><span class="material-icons-sharp">search</span></button>
