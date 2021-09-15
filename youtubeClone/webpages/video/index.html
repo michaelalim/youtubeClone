@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="../../dependencies/css/common.css">
+    <link rel="stylesheet" href="index.css">
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +17,7 @@
 
     <div class="main-container-home" id="main-container">
         <header class="header" id="header-container">
+            <button class="menu-btn sidebar-btn" id="menu-btn"><span class="side-icon material-icons-outlined">menu</span></button>
             <div class="logo-section">
                 <a href="../home/index.html" id="head-logo"><img src="../../media/imgs/logo.png"></a>
             </div> 
@@ -28,7 +31,66 @@
             <div class="others-section" id="others-section"></div>
         </header>
 
-        <nav class="sidebar" id="sidebar-nav"></nav>
+        <div class="main-content" id="main-content">
+            <div class="video-area">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/WehhSc1knYY" alt="Day6 Zombie English Version video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="title-area">
+                    <h5 class="title">DAY6 "Zombie (English Ver.)" Lyric Video</h5>
+                    <h6 class="view date">9,547,254 views · 21 May 2020</h6>
+                    <div class="like-area-btns">
+                        <div class="like-dislike-btns">
+                            <button class="btn like-btn" id="like-btn"><span class="material-icons">thumb_up</span> 410K</button>
+                            <button class="btn dislike-btn" id="dislike-btn"><span class="material-icons-outlined">thumb_down</span> 784</button>
+                        </div>
+                        <button class="btn share-btn" id="share-btn"><span class="material-icons-outlined">send</span> Share</button>
+                        <button class="btn save-btn" id="save-btn"><span class="material-icons-outlined">playlist_add</span>Save</button>
+                        <button class="btn others-btn" id="others-btn"><span class="material-icons-outlined">more_horiz</span></button>
+                    </div>
+                </div>
+                <div class="channel-info">
+                    <div class="channel-name">
+                        <div class="channel-pic"> <img src="../../media/imgs/youngk.png" alt="Day6 Picture"> </div>
+                        <div class="name-and-sub">
+                            <span class="channel-name-display">DAY6</span>
+                            <span class="channel-sub-display">1.75M subscribers</span>
+                        </div>
+                    </div>
+                    <div class="subscribe-area">
+                        <button class="btn subscribe-channel-btn" id="subscribe-channel-btn">SUBSCRIBE</button>
+                        <button class="btn notif-btn" id="notif-btn"><span class="material-icons-outlined">notifications</span></button>
+                    </div>
+                </div>
+                <div class="description-area">
+                    <div class="sub-container">
+                        <p class="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat repellendus, pariatur possimus accusantium facere reprehenderit dolor voluptatibus voluptatum nemo et asperiores <span class="dots" id="dots">...</span><span class="more"> dolores sit dignissimos vero iste at, fugit non vitae?</span></p>
+                        <p class="para-2"><span class="more">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aliquid expedita maxime neque placeat voluptas velit tempore ad aperiam itaque modi reprehenderit distinctio, at dicta accusantium assumenda. Excepturi maiores similique voluptates vel sit laudantium alias harum porro sequi, nihil odio blanditiis voluptatibus minus, animi repellat, fuga odit nam provident officiis non corrupti. Eum explicabo ad amet cumque voluptas quod dolores natus, voluptatibus cupiditate minus nisi sunt maxime deserunt unde repellat?</span></p>
+                        <p class="para-3"><span class="more">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos deserunt sapiente culpa pariatur harum saepe eos officia reprehenderit totam soluta.</span></p>
+
+                        <button class="see-more" id="see-more">SHOW MORE</button>
+                    </div>
+                </div>
+                <div class="enter-comment-area">
+                    <div class="comments-num-row">
+                        <span class="number-of-comments">11,929 Comments</span>
+                        <button class="sort-comments"><span class="material-icons-outlined">sort</span> <span>SORT BY</span></button>
+                    </div>
+                    <div class="add-comment-row">
+                        <div class="profile-pic-comment"> <img src="../../media/imgs/profile.jpg" alt="profile-pic-user"> </div>
+                        <div class="input-comment">
+                            <input type="text" id="add-comment" placeholder="Add a public comment...">
+                            <div class="comment-btns">
+                                <button class="btn cancel-btn" id="cancel-comment">CANCEL</button>
+                                <button class="btn comment-btn" id="send-comment">COMMENT</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="suggestion-area">
+            </div>
+        </div>
+    </div>
+
 
     <!-- Menu section -->
     <div class="menu-section" id="menu-section">
@@ -61,11 +123,11 @@
                 <span class="copyright">© 2021 Google LLC</span>
             </div>
         </div>
-
-    <div class="off-sidebar-space close-menu" id="off-sidebar-space">
-        
+        <nav class="sidebar" id="sidebar-nav"></nav>
+        <div class="off-sidebar-space close-menu" id="off-sidebar-space">
+            
+        </div>
     </div>
-</div>
 
 
 <script type="module" src="index.js"></script>  
