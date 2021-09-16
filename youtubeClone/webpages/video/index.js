@@ -2,7 +2,6 @@
 
 import { startUp } from "../../dependencies/elements/sidebar.js"
 
-<<<<<<< HEAD
 // buttons on the LIKE row
 
 import { likeAreaArrs } from "./videoArrEls.js";
@@ -56,18 +55,12 @@ likeAreaArrs.forEach((btns) => {
     }
 })
 
-=======
-startUp();
+// see more function on the description
 
->>>>>>> 1afbfe4ff80e275178115b070c7c67ab472c3b00
 const descSeeMoreBtn = document.getElementById("see-more");
 const dots = document.getElementById("dots");
 const hiddenMsgs = document.querySelectorAll(".more");
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 1afbfe4ff80e275178115b070c7c67ab472c3b00
 descSeeMoreBtn.addEventListener("click", () => {
    
     if (descSeeMoreBtn.textContent === "SHOW LESS"){
@@ -85,6 +78,8 @@ descSeeMoreBtn.addEventListener("click", () => {
     }
 })
 
+//responsive design for inputting comment before posting
+
 const commentBar = document.getElementById("add-comment");
 const sendCommentBtn = document.getElementById("send-comment");
 
@@ -96,8 +91,89 @@ commentBar.addEventListener("input", () => {
         sendCommentBtn.style.background = "#333";
         sendCommentBtn.style.color = "#777";
     }
-<<<<<<< HEAD
 });
-=======
-})
->>>>>>> 1afbfe4ff80e275178115b070c7c67ab472c3b00
+
+import { vidComments } from "./commentArr.js";
+
+const postArea = document.getElementById("posts-area");
+
+vidComments.forEach((post) => {
+
+        const {postUserImg: img, 
+            postUsername: name, 
+            postTime: time,
+            postContent: comment,
+            postLikes: likes,
+            postDislikes: dislikes,
+            postReplies: replies
+        } = post
+
+        const commentContainer = document.createElement("div");
+        commentContainer.classList.add("going-right");
+        postArea.appendChild(commentContainer);
+
+        const postUserImg = document.createElement("img");
+        postUserImg.src = img;
+        postUserImg.classList.add("post-img");
+        commentContainer.appendChild(postUserImg);
+
+        const postBox = document.createElement("div");
+        postBox.classList.add("post-box");
+        postBox.setAttribute("id", "post-box")
+        commentContainer.appendChild(postBox);
+
+        const postUsername = document.createElement("span");
+        postUsername.textContent = name;
+        postUsername.classList.add("post-username");
+        postBox.appendChild(postUsername);
+
+        const postTime = document.createElement("span");
+        postTime.textContent = time;
+        postTime.classList.add("post-time");
+        postBox.appendChild(postTime);
+
+        const postContent = document.createElement("p");
+        postContent.textContent = comment;
+        postContent.classList.add("post-content");
+        postBox.appendChild(postContent);
+
+        const likeBtn = document.createElement("button");
+        likeBtn.textContent = "thumb_up"
+        likeBtn.classList.add("post-like-btn", "post-btn", "material-icons-outlined");
+        postBox.appendChild(likeBtn);
+
+        const likeNum = document.createElement("span");
+        likeNum.textContent = likes;
+        likeNum.classList.add("post-like-total", "post-total");
+        postBox.appendChild(likeNum);
+
+        const dislikeBtn = document.createElement("button");
+        dislikeBtn.classList.add("post-dislike-btn", "post-btn", "material-icons-outlined");
+        dislikeBtn.textContent = "thumb_down";
+        postBox.appendChild(dislikeBtn);
+
+        const dislikeNum = document.createElement("span");
+        dislikeNum.textContent = dislikes;
+        dislikeNum.classList.add("post-dislike-total", "post-total");
+        postBox.appendChild(dislikeNum);
+
+        const replyBtn = document.createElement("button");
+        replyBtn.textContent = `REPLY`;
+        replyBtn.classList.add("post-reply");
+        postBox.appendChild(replyBtn);
+
+        const viewReplies = document.createElement("button");
+        viewReplies.classList.add("view-reply");
+        postBox.appendChild(viewReplies);
+
+        const expandMoreViewReps = document.createElement("span");
+        expandMoreViewReps.classList.add("material-icons-outlined", "view-more-icon");
+        expandMoreViewReps.textContent = "arrow_drop_down";
+        viewReplies.appendChild(expandMoreViewReps);
+
+        const viewRepliesText = document.createElement("span");
+        viewRepliesText.textContent = `View ${replies} replies`;
+        viewReplies.appendChild(viewRepliesText);
+        
+
+});
