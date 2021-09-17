@@ -31,7 +31,7 @@ header.header{
     grid-template-areas: 
         "h h"
         "v s";
-    grid-gap: 0 50px;
+    grid-gap: 0 30px;
 }
 
 .video-area{
@@ -386,28 +386,15 @@ header.header{
     color: #ccc;
     font-size: 0.85rem;
     padding: 5px;
-    margin-right: 30px;
-}
-
-.post-dislike-btn{
-    margin-right: 25px;
+    margin-right: 5px;
 }
 
 .post-total{
     display: inline-block;
     font-size: 0.7rem;
     line-height: 10px;
-    position: absolute;
-}
-
-.post-like-total{
-    left: 28px;
-    bottom: 43px;
-}
-
-.post-dislike-total{
-    left: 85px;
-    bottom: 43px;
+    margin-right: 15px;
+    transform: translateY(-25%);
 }
 
 .post-reply{
@@ -416,9 +403,6 @@ header.header{
     border: none;
     color: #999;
     font-weight: 550;
-    position: absolute;
-    left: 110px;
-    bottom: 40px;
 }
 
 .view-reply{
@@ -439,5 +423,71 @@ header.header{
 /* right side of the screen */
 .suggestion-area{
     grid-area: s;
-    background: #343434;
+}
+
+.suggest-category{
+    max-height: 50px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.suggest-category button.category{
+    width: max-content;
+    padding: 8px 15px;
+    margin: 10px 5px;
+    background: #333;
+    border: 0.1px solid #555;
+    outline: none;
+    border-radius: 25px;
+    font-weight: 550;
+    color: #eee;
+    cursor: pointer;
+}
+
+.suggest-category button.category.active{
+    background: #ddd;
+    color: #111;
+}
+
+.suggest-videos{
+    display: flex;
+    flex-direction: column;
+}
+
+.sug-container{
+    max-height: 140px;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.thumbnail-div{
+    margin-right: 10px;
+}
+
+.sug-thumbnail{
+    height: 100%;
+    width: 200px;
+}
+
+.title-div{
+    margin-bottom: 10px;
+    min-height: 40px;
+    max-height: 60px;
+}
+
+.sug-title{
+    font-size: 0.9rem;
+}
+
+.sug-uploader{
+    display: block;
+    font-size: 0.8rem;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.sug-views-count,
+.sug-post-age{
+    font-size: 0.8rem;
+    color: #888;
 }

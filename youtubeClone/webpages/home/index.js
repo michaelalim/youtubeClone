@@ -32,21 +32,18 @@ videoTitleEl.forEach(div => {
     })
 })
 
-
-let count = 0;
 categories.forEach((cat) => {
     const btn = document.createElement("button");
     btn.classList.add("category");
-    if (count === 0){
+    if (cat.name === "All"){
         btn.classList.add("active");
-        btn.setAttribute("id", `category${count+1}`)
+        btn.setAttribute("id", `All`)
     }
     btn.textContent = cat.name;
     btn.addEventListener("click", () => {
         location.href = cat.link;
     });
     categoryContainer.appendChild(btn);
-    count++;
 }); 
 
 const categoryBtn = document.querySelectorAll("button.category");

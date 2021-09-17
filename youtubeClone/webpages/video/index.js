@@ -166,14 +166,106 @@ vidComments.forEach((post) => {
         viewReplies.classList.add("view-reply");
         postBox.appendChild(viewReplies);
 
-        const expandMoreViewReps = document.createElement("span");
-        expandMoreViewReps.classList.add("material-icons-outlined", "view-more-icon");
-        expandMoreViewReps.textContent = "arrow_drop_down";
-        viewReplies.appendChild(expandMoreViewReps);
+        if (replies === 0){
 
-        const viewRepliesText = document.createElement("span");
-        viewRepliesText.textContent = `View ${replies} replies`;
-        viewReplies.appendChild(viewRepliesText);
-        
+        } else if (replies === 1){
+            const expandMoreViewReps = document.createElement("span");
+            expandMoreViewReps.classList.add("material-icons-outlined", "view-more-icon");
+            expandMoreViewReps.textContent = "arrow_drop_down";
+            viewReplies.appendChild(expandMoreViewReps);
 
+            const viewRepliesText = document.createElement("span");
+            viewRepliesText.textContent = `View ${replies} reply`;
+            viewReplies.appendChild(viewRepliesText);
+        } else 
+        {
+            const expandMoreViewReps = document.createElement("span");
+            expandMoreViewReps.classList.add("material-icons-outlined", "view-more-icon");
+            expandMoreViewReps.textContent = "arrow_drop_down";
+            viewReplies.appendChild(expandMoreViewReps);
+
+            const viewRepliesText = document.createElement("span");
+            viewRepliesText.textContent = `View ${replies} replies`;
+            viewReplies.appendChild(viewRepliesText);
+        }
 });
+
+//suggestion area of the page
+
+const suggestCategory = document.getElementById("suggest-category");
+
+import { categories } from "../../dependencies/arrays/categories.js";
+
+categories.forEach((cat) => {
+    const btn = document.createElement("button");
+    btn.classList.add("category");
+    if (cat.name === "All"){
+        btn.classList.add("active");
+        btn.setAttribute("id", `All`)
+    }
+    btn.textContent = cat.name;
+    btn.addEventListener("click", () => {
+        location.href = cat.link;
+    });
+    suggestCategory.appendChild(btn);
+}); 
+
+const suggestions = document.getElementById("suggest-videos");
+
+import { suggestionVideos } from "./videoArrEls.js";
+
+suggestionVideos.forEach((sug) => {
+    const suggestionContainer = document.createElement("div");
+    suggestionContainer.classList.add("sug-container");
+    suggestions.appendChild(suggestionContainer);
+
+    const thumbnailDiv = document.createElement("div");
+    thumbnailDiv.classList.add("thumbnail-div");
+    suggestionContainer.appendChild(thumbnailDiv);
+
+    const sugThumbnail = document.createElement("img");
+    sugThumbnail.src = sug.thumbnailDisplay;
+    sugThumbnail.classList.add("sug-thumbnail");
+    thumbnailDiv.appendChild(sugThumbnail);
+    sugThumbnail.addEventListener("mouseover", () => {
+        sugThumbnail.src = sug.onHover;
+        sugThumbnail.addEventListener("mouseleave", () => {
+            sugThumbnail.src = sug.thumbnailDisplay;
+        })
+    })
+
+    const detailsDiv = document.createElement("div");
+    detailsDiv.classList.add("details-div");
+    suggestionContainer.appendChild(detailsDiv);
+
+    const titleDiv = document.createElement("div");
+    titleDiv.classList.add("title-div");
+    detailsDiv.appendChild(titleDiv);
+
+    const sugTitle = document.createElement("span");
+    sugTitle.textContent = sug.videosTitle;
+    sugTitle.classList.add("sug-title");
+    titleDiv.appendChild(sugTitle);
+
+    const sugUploader = document.createElement("span");
+    sugUploader.textContent = sug.uploader;
+    sugUploader.classList.add("sug-uploader");
+    detailsDiv.appendChild(sugUploader);
+
+    const sugViewsCount = document.createElement("span");
+    // sugViewsCount.textContent = sug.viewsCount;
+    if (sug.viewsCount > 1000000){
+        sugViewsCount.textContent = `${Math.floor(sug.viewsCount / 1000000)}M views `
+    } else if (sug.viewsCount > 1000){
+        sugViewsCount.textContent = `${Math.floor(sug.viewsCount / 1000000)}K views `
+    } else if (sugViewsCount < 1000){
+        sugViewsCount.textContent = `${sug.viewsCount} views `;
+    }
+    sugViewsCount.classList.add("sug-views-count");
+    detailsDiv.appendChild(sugViewsCount);
+
+    const sugPostAge = document.createElement("span");
+    sugPostAge.textContent = `· ${sug.uploadAge}`;
+    sugPostAge.classList.add("sug-post-age");
+    detailsDiv.appendChild(sugPostAge);
+})

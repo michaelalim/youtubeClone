@@ -29,3 +29,134 @@ export const likeAreaArrs = [
         spanName: "more_horiz",
     }
 ]
+
+export const suggestionVideos = [
+    {
+        thumbnailDisplay: "../../media/imgs/zombie.png",
+        onHover: "../../media/imgs/zombie.webp",
+        videosTitle: 'DAY6 "Zombie (English Ver.)" Lyric Video',
+        uploader: "DAY6",
+        viewsCount: 9547254,
+        uploadAge: "1 year ago"
+    },
+    {
+        thumbnailDisplay: "../../media/imgs/zombie.png",
+        onHover: "../../media/imgs/zombie.webp",
+        videosTitle: 'DAY6 "Zombie (English Ver.)" Lyric Video',
+        uploader: "DAY6",
+        viewsCount: 9547254,
+        uploadAge: "1 year ago"
+    },
+    {
+        thumbnailDisplay: "../../media/imgs/zombie.png",
+        onHover: "../../media/imgs/zombie.webp",
+        videosTitle: 'DAY6 "Zombie (English Ver.)" Lyric Video',
+        uploader: "DAY6",
+        viewsCount: 9547254,
+        uploadAge: "1 year ago"
+    },
+    {
+        thumbnailDisplay: "../../media/imgs/zombie.png",
+        onHover: "../../media/imgs/zombie.webp",
+        videosTitle: 'DAY6 "Zombie (English Ver.)" Lyric Video',
+        uploader: "DAY6",
+        viewsCount: 9547254,
+        uploadAge: "1 year ago"
+    },
+    {
+        thumbnailDisplay: "../../media/imgs/zombie.png",
+        onHover: "../../media/imgs/zombie.webp",
+        videosTitle: 'DAY6 "Zombie (English Ver.)" Lyric Video',
+        uploader: "DAY6",
+        viewsCount: 9547254,
+        uploadAge: "1 year ago"
+    },
+    {
+        thumbnailDisplay: "../../media/imgs/zombie.png",
+        onHover: "../../media/imgs/zombie.webp",
+        videosTitle: 'DAY6 "Zombie (English Ver.)" Lyric Video',
+        uploader: "DAY6",
+        viewsCount: 9547254,
+        uploadAge: "1 year ago"
+    },
+    {
+        thumbnailDisplay: "../../media/imgs/zombie.png",
+        onHover: "../../media/imgs/zombie.webp",
+        videosTitle: 'DAY6 "Zombie (English Ver.)" Lyric Video',
+        uploader: "DAY6",
+        viewsCount: 9547254,
+        uploadAge: "1 year ago"
+    },
+    {
+        thumbnailDisplay: "../../media/imgs/zombie.png",
+        onHover: "../../media/imgs/zombie.webp",
+        videosTitle: 'DAY6 "Zombie (English Ver.)" Lyric Video',
+        uploader: "DAY6",
+        viewsCount: 9547254,
+        uploadAge: "1 year ago"
+    },
+    {
+        thumbnailDisplay: "../../media/imgs/zombie.png",
+        onHover: "../../media/imgs/zombie.webp",
+        videosTitle: 'DAY6 "Zombie (English Ver.)" Lyric Video',
+        uploader: "DAY6",
+        viewsCount: 9547254,
+        uploadAge: "1 year ago"
+    },
+    {
+        thumbnailDisplay: "../../media/imgs/zombie.png",
+        onHover: "../../media/imgs/zombie.webp",
+        videosTitle: 'DAY6 "Zombie (English Ver.)" Lyric Video',
+        uploader: "DAY6",
+        viewsCount: 9547254,
+        uploadAge: "1 year ago"
+    },
+    {
+        thumbnailDisplay: "../../media/imgs/zombie.png",
+        onHover: "../../media/imgs/zombie.webp",
+        videosTitle: 'DAY6 "Zombie (English Ver.)" Lyric Video',
+        uploader: "DAY6",
+        viewsCount: 9547254,
+        uploadAge: "1 year ago"
+    },
+    {
+        thumbnailDisplay: "../../media/imgs/zombie.png",
+        onHover: "../../media/imgs/zombie.webp",
+        videosTitle: 'DAY6 "Zombie (English Ver.)" Lyric Video',
+        uploader: "DAY6",
+        viewsCount: 9547254,
+        uploadAge: "1 year ago"
+    },
+    {
+        thumbnailDisplay: "../../media/imgs/zombie.png",
+        onHover: "../../media/imgs/zombie.webp",
+        videosTitle: 'DAY6 "Zombie (English Ver.)" Lyric Video',
+        uploader: "DAY6",
+        viewsCount: 9547254,
+        uploadAge: "1 year ago"
+    },
+    {
+        thumbnailDisplay: "../../media/imgs/zombie.png",
+        onHover: "../../media/imgs/zombie.webp",
+        videosTitle: 'DAY6 "Zombie (English Ver.)" Lyric Video',
+        uploader: "DAY6",
+        viewsCount: 9547254,
+        uploadAge: "1 year ago"
+    },
+    {
+        thumbnailDisplay: "../../media/imgs/zombie.png",
+        onHover: "../../media/imgs/zombie.webp",
+        videosTitle: 'DAY6 "Zombie (English Ver.)" Lyric Video',
+        uploader: "DAY6",
+        viewsCount: 9547254,
+        uploadAge: "1 year ago"
+    },
+    {
+        thumbnailDisplay: "../../media/imgs/zombie.png",
+        onHover: "../../media/imgs/zombie.webp",
+        videosTitle: 'DAY6 "Zombie (English Ver.)" Lyric Video',
+        uploader: "DAY6",
+        viewsCount: 9547254,
+        uploadAge: "1 year ago"
+    }
+]
