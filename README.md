@@ -21,3 +21,8 @@ currently making a youtube clone
 5. Library page (library page on youtube) 
 
 *#3 to #5 only have sidebars and headers as of this time*
+
+### September 17
+
+- I have done maybe 75% to 80% of the video page, what's left is responsiveness of the page and maybe some functions for the button and such. Will be a hard 20% and I realized maybe it's not worth **FOR NOW** because it will just be a repetition of what I was doing in the home page. 
+- For now, I will progress with Kyle's (Web Dev Simplified) projects. Since this has been a massive extension of what he has tasked to do since the task was just to use HTML and CSS and other pages was never included.
