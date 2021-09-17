@@ -257,7 +257,7 @@ suggestionVideos.forEach((sug) => {
     if (sug.viewsCount > 1000000){
         sugViewsCount.textContent = `${Math.floor(sug.viewsCount / 1000000)}M views `
     } else if (sug.viewsCount > 1000){
-        sugViewsCount.textContent = `${Math.floor(sug.viewsCount / 1000000)}K views `
+        sugViewsCount.textContent = `${Math.floor(sug.viewsCount / 1000)}K views `
     } else if (sugViewsCount < 1000){
         sugViewsCount.textContent = `${sug.viewsCount} views `;
     }
